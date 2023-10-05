@@ -111,7 +111,8 @@ li>div {
 
 .sub-item:hover >a{
 /*   background: lightpink; */
- 
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .sub-item > a {
@@ -119,7 +120,7 @@ li>div {
 	padding: 10px;
 	font-size: 12pt;
 	text-decoration: none;
-	color: black;
+	color: white;
 }
 
 iframe {
