@@ -1,0 +1,32 @@
+
+#surface {
+	border-collapse: collapse;
+	font-family: monospace;
+	font-size: 2em;
+	box-shadow: 30px 30px 30px green;
+	
+	/*box-shadow: 30px(x축) 30px(y축) 30px(퍼짐정도) green;*/
+
+}
+
+body {
+	background-image: url("/media/grass.jpg");
+	
+	/*
+	background-image: url("/media/fubao.jpg"), url("/media/twin.jpg");
+	background-repeat: no-repeat, repeat;
+	background-size: 100%, 100%;	
+	background-position: center;
+	background-position: top, bottom;
+	
+	*/
+}
+
+#btncreate {
+	padding: 10px;
+	background-color: green;
+	color:cornsilk ;
+	font-size: 20px;
+	border-color: green;
+	border-style: none;
+}
