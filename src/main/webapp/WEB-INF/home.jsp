@@ -10,11 +10,15 @@
 <style type="text/css">
 nav {
  /*  border: 5px dashed yellow; */
+ 	height: 150px;
+ 	width: 100%;
+ 	background: Turquoise;
+ 	position: fixed;
  }
 
 ul{
 /*   border: 2px solid red; */  
-margin: 0px;
+margin-top: 30px;
   
 }
 
@@ -45,11 +49,10 @@ li>div {
 
 .menu-title {
  	padding: 10px;
- 	font-size: 20px;
+ 	font-size: 30px;
  	font-weight: bold;
- 	color: gray;
- 	opacity: 0.7;
- 	
+ 	color: white;
+ 	 	
 }
 
 /* .menu-title:hover + .sub-menu {
@@ -63,7 +66,7 @@ li>div {
 	list-style: none;
 	align-items:flex-start;
 	position: fixed;
-	width: 95%;
+	width: 100%;
 	top:10px;
 	left: 10px;
 }
@@ -73,14 +76,14 @@ li>div {
 
 .menu-item {
 	/* float: left; ->예전에는 수평메뉴를 만들 때 float으로 했다.*/
-	width: 150px;
+	width: 180px;
 	/* min width: 200px; */
 	flex-shrink: 0;
-	background: plum;	
- 	text-align: center; 	
+ 	text-align: center; 
+ 	background: Turquoise;	
 }
 .menu-item:hover> .menu-title {
-	text-shadow: 10px 10px 5px white;
+	text-shadow: 10px 10px 3px black;
 
 }
 
@@ -110,7 +113,7 @@ li>div {
 }
 
 .sub-item:hover >a{
-/*   background: lightpink; */
+
   font-weight: bold;
   text-decoration: underline;
 }
@@ -118,7 +121,7 @@ li>div {
 .sub-item > a {
 	display: block;
 	padding: 10px;
-	font-size: 12pt;
+	font-size: 20pt;
 	text-decoration: none;
 	color: white;
 }
@@ -167,6 +170,7 @@ window.onload = () => {
 			<li class="sub-item"><a target="content" href="/alpha/cross">cross</a></li>
 			<li class="sub-item"><a target="content" href="/alpha/race">race</a></li>
 			<li class="sub-item"><a target="content" href="/alpha/zigzag">zigzag</a></li>
+			<li class="sub-item"><a target="content" href="/alpha/earthworm">earthworm</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">

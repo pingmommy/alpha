@@ -112,6 +112,21 @@ public class AlphaController {
 		
 		model.addAttribute("surface", alphas);
 	}
+	
+	
+	@GetMapping("/earthworm")
+	void earthworm(Model model) {
+		var alphas = new ArrayList<ArrayList<Alpha>>();
+		
+		for(var i =0; i<20; i++) {
+			alphas.add(new ArrayList<Alpha>());
+			for(var j =0; j<40; j++) {
+				alphas.get(i).add(new Alpha());
+			}
+			
+			model.addAttribute("surface", alphas);
+		}
+	}
 
 
 }
