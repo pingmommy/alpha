@@ -7,7 +7,25 @@
 
 <script src="/webjars/jquery/jquery.js"></script>
 
-<title>jquery_attr.jsp</title>
+<title>placeholder.jsp</title>
+
+<style type="text/css">
+ img {
+ 
+  animation : rotate 10s infinite linear;
+}
+
+@keyframes rotate {
+ from {
+ 	transform: rotate(0deg);
+ }
+ 
+ to {
+ 	transform: rotate(360deg);
+ }
+}
+
+</style>
 
 
 <script type="text/javascript">
@@ -52,7 +70,6 @@ $(function() {
 
 
 </script>
-
 </head>
 <body>
 
