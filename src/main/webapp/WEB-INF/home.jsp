@@ -185,6 +185,7 @@ $(document).ready(function(){
 			<li class="sub-item"> <a target="content" href="/ani/fill"">ani_fill</a></li>
 			<li class="sub-item"> <a target="content" href="/ani/cross"">ani_cross</a></li>
 			<li class="sub-item"> <a target="content" href="/cube.jsp"">cube</a></li>
+			<li class="sub-item"> <a target="content" href="/placeholder.jsp"">placeholder</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">

@@ -51,6 +51,7 @@ function startBtn_click(e){
 		
 		if(count.innerText == 800){
 			clearInterval(tid);
+			clearInterval(sid);
 			return;
 		}
 			
