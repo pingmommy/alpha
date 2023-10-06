@@ -5,6 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="/webjars/jquery/jquery.js"></script>
 <title>race.jsp</title>
 
 <style type="text/css">
@@ -32,8 +33,8 @@ section > table {
 </style>
 
 <script type="text/javascript">
-window.onload = function() {
-	 
+
+$(function (){	 
 	startbtn.onclick = e => {
 				
 		fetch('/alpha/data')
@@ -43,7 +44,7 @@ window.onload = function() {
 			race(alpha);					
 		}); }
 	
-}
+});
 
 function race(alpha){
 	

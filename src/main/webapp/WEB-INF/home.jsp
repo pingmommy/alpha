@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<script type="text/javascript" src="/webjars/jquery/jquery.js"></script>
 <title>HELLO</title>
 <link rel="icon" type="image/png" href="/favicon.png"/>
 <link rel="stylesheet" href="/css/cube.css">
@@ -141,9 +142,14 @@ function resize(){
 	
 }
 
-window.onload = () => {
+/* window.onload = () => {
 	setInterval(resize,100);
-}
+} */
+
+$(document).ready(function(){
+	setInterval(resize,100);
+});
+
 </script>
 </head>
 <body>
