@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 <style type="text/css">
 img {
- margin: 200px;
- margin-left: 600px;
+ margin: 150px;
+ margin-left: 700px;
 }
 </style>
 
