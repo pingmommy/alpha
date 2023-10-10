@@ -9,6 +9,9 @@
 <link rel="icon" type="image/png" href="/favicon.png"/>
 <link rel="stylesheet" href="/css/cube.css">
 <style type="text/css">
+
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+
 nav {
  /*  border: 5px dashed yellow; */
  	height: 150px;
@@ -51,8 +54,9 @@ li>div {
 .menu-title {
  	padding: 10px;
  	font-size: 30px;
- 	font-weight: bold;
+ 	/* font-weight: bold; */
  	color: white;
+ 	font-family: 'Black Han Sans', sans-serif;
  	 	
 }
 
