@@ -53,7 +53,7 @@ li>div {
 
 .menu-title {
  	padding: 10px;
- 	font-size: 30px;
+ 	font-size: 25px;
  	/* font-weight: bold; */
  	color: white;
  	font-family: 'Black Han Sans', sans-serif;
@@ -81,7 +81,7 @@ li>div {
 
 .menu-item {
 	/* float: left; ->예전에는 수평메뉴를 만들 때 float으로 했다.*/
-	width: 180px;
+	width: 230px;
 	/* min width: 200px; */
 	flex-shrink: 0;
  	text-align: center; 
@@ -94,7 +94,6 @@ li>div {
 
 .menu-item:hover> .sub-menu {
 	max-height: 500px;
-	
 	transition: max-height 2s;
 }
 
@@ -120,7 +119,7 @@ li>div {
 .sub-item:hover >a{
 
   font-weight: bold;
-  text-decoration: underline;
+  color: black;
 }
 
 .sub-item > a {
@@ -174,7 +173,7 @@ $(document).ready(function(){
 	</section>		
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">Alpha</div>
+		<div class="menu-title">ALPHA</div>
 		<ol class="sub-menu">
 			<li class="sub-item"><a target="content" href="/alpha/fill">fill</a></li>
 			<li class="sub-item"><a target="content" href="/alpha/cross">cross</a></li>
@@ -184,7 +183,7 @@ $(document).ready(function(){
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">Animation</div>
+		<div class="menu-title">ANIMATION</div>
 		<ol class="sub-menu">
 			<li class="sub-item"> <a target="content" href="/ani/fill"">ani_fill</a></li>
 			<li class="sub-item"> <a target="content" href="/ani/cross"">ani_cross</a></li>
@@ -193,7 +192,7 @@ $(document).ready(function(){
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">React</div>
+		<div class="menu-title">REACT</div>
 		<ol class="sub-menu">
 			<li class="sub-item"><a target="content" href="/react/fill">fill</a></li>
 			<li class="sub-item"><a target="content" href="/react/cross">cross</a></li>
@@ -201,7 +200,7 @@ $(document).ready(function(){
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">Employee</div>
+		<div class="menu-title">EMPLOYEE</div>
 		<ol class="sub-menu">
 			<li class="sub-item"><a target="content" href="/dept/list">dept</a></li>
 			<li class="sub-item"><a target="content" href="/emp/list">emp</a></li>
@@ -209,7 +208,7 @@ $(document).ready(function(){
 		</ol>
 	</li>
 	<li class="menu-item">
-		<div class="menu-title">City</div>
+		<div class="menu-title">CITY</div>
 		<ol class="sub-menu">
 			<li class="sub-item"><a target="content" href="/city/list">city</a></li>
 			<li class="sub-item"><a target="content" href="/country/list">country</a></li>
@@ -218,7 +217,7 @@ $(document).ready(function(){
 		</ol>
 	</li>
 	<li class="menu-item">
-	    <div class="menu-title">Login</div>
+	    <div class="menu-title">LOGIN</div>
 	</li>
 </ul>
 </nav>

@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <style type="text/css">
 
   @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
@@ -30,7 +31,7 @@ span {
 	width:70px;
 	font-weight: 900;
 	opacity: 1.0;
-	animation : rotate 4s infinite;
+	animation : rotate 2s infinite;
 	 font-size: 50px;
 }
 
@@ -41,9 +42,18 @@ from {color: pink;}
 
 </style>
 
+<script type="text/javascript">
+ $(document).ready(
+		setInterval(function () {
+		   $('img').fadeOut(0).fadeIn(5000).delay(2000).fadeOut(4000),1000
+	})
+		)
+
+</script>
+
 </head>
 <body>
-<div>저는 <span>조아라</span> 입니다.</div>
+<div> <span>조아라</span> 입니다.</div>
 <img alt="xxx" src="/media/hello.jpg">
 </body>
 </html>

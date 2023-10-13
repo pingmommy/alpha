@@ -12,23 +12,26 @@ table {
  font-size: 2em;
  font-family: monospace;
 }
-
 </style>
-
 <script type="text/javascript">
-window.onload =() =>{
+
+
+
+window.onload = ()=> {
 	
-	no1.onclick= async function(){
-		
+	no1.onclick= e => { run(); }
+	
+	async function run() {
 		let response = await fetch('/alpha/data');
 		let alpha = await response.json();
+		
 		console.log(alpha);
-		
-		let table = document.querySelector("table");
-		let td =
-		
 	}
+	
+	
 }
+
+
 
 </script>
 </head>
