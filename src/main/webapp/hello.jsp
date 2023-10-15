@@ -12,8 +12,9 @@
 
 
 img {
-	margin-top:10px;
-   margin-left: 600px;
+	margin:10px;
+    margin-left: 500px;
+  
  /* border: 1px solid red; */
 }
 
@@ -31,7 +32,7 @@ span {
 	width:70px;
 	font-weight: 900;
 	opacity: 1.0;
-	animation : rotate 2s infinite;
+	animation : rotate 3s infinite alternate;
 	 font-size: 50px;
 }
 

@@ -52,7 +52,7 @@ li>div {
 
 
 .menu-title {
- 	padding: 10px;
+ 	padding: 15px 10px;
  	font-size: 25px;
  	/* font-weight: bold; */
  	color: white;
@@ -120,6 +120,7 @@ li>div {
 
   font-weight: bold;
   color: black;
+  text-shadow: 5px 5px 3px white;
 }
 
 .sub-item > a {
@@ -131,7 +132,7 @@ li>div {
 }
 
 iframe {
- margin-top: 200px;
+ margin: 200px auto;
 }
 
 </style>

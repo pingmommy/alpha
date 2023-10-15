@@ -15,10 +15,6 @@
 	border: 20px outset pink;
 }
 
-body {
-	/*  background: url("/media/small.png"); */
-}
-
 #surface td{
   opacity: 0.8
 }
@@ -124,7 +120,7 @@ window.onload = () => {
 <h1>Async/await +class 실습</h1>
 <hr>
 <button id="createbtn">create</button>
-<input type="checkbox" id="auto" name="auto">
+<input type="checkbox" id="auto" name="auto" >
 <label>AUTO</label>
 	<hr>
 <table id="surface" onmousedown="event.preventDefault();" oncontextmenu="event.preventDefault();">

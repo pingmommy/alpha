@@ -6,6 +6,7 @@
 <head>
 <meta charset="UTF-8">
 <title>fill</title>
+
 <style type="text/css">
 
 table {
@@ -13,28 +14,12 @@ table {
  	font-family: monospace;
  	font-size: 2em;
  	/* border-left:15px solid green; */
- 	background: url("/media/favicon.png");
- 	background-repeat: repeat-x;
+ 	margin: 0px auto;
 }
 </style>
 
 <script type="text/javascript">
 
-window.onload = function() {
-	
-	// return false => 디폴트무브를 막을 수 있는데, 버블링이 있으면 작동하지 않는다. 
-	/*
-	화면을 드래그하면 화면이 까매도 글자가 다 보여서 디폴트 무브를 막아서 해결함. 
-	surface.onmousedown = function(e){
-		e.preventDefault();
-	} */
-	
-
-	
-	surface.oncontextmenu = function(e) {
-		e.preventDefault();
-	}
-}
 
 function startBtn_click(e){
 	console.log("start..");
@@ -52,6 +37,8 @@ function startBtn_click(e){
 		if(count.innerText == 800){
 			clearInterval(tid);
 			clearInterval(sid);
+			start.disabled = false;
+			clear.disabled = false;
 			return;
 		}
 			
@@ -59,7 +46,7 @@ function startBtn_click(e){
 		xhr.open('GET', '/alpha/data')
 		xhr.responseType='json';
 		
-		// 비동기방식으로 진행하는데, xhr이 제대로 동작하면 온로드가 수행된다. 
+		
 		xhr.onload = e =>{
 			let alpha =  xhr.response;
 			console.log(alpha);
@@ -81,20 +68,7 @@ function startBtn_click(e){
 		}, 10);
 }
 function clearBtn_click(e){
-	/* for(let i =0; i<surface.row.length; i++){
-		for(let j=0; j<surface.row[i].cells.length;j++){
-			surface.rows[i].cells[j].style.background='black';
-			surface.rows[i].cells[j].style.color='black';
-		}
-	} */
 	
-	/* for(let row of surface.rows){
-		for(let td of row.cells){
-			td.style.color ='black';
-			td.style.background ='black';
-		}
-	} */
-	/*유사배열이어서 배열처럼 쓰려면 Array.from을 써야 한다.  */
 	Array.from(surface.rows).forEach(function(row) {
 		Array.from(row.cells).forEach(function(td) {
 			td.style.color ='black';
@@ -105,13 +79,29 @@ function clearBtn_click(e){
 	seconds.innerText =0;
 	forecount.innerText =0;
 }
+
+function handleBtn_click(e) {
+	let d = document.querySelector('#skill');
+	let isOpen = false;
+	console.log("btn..");
+	if(!isOpen)
+		d.style.opacity="1.0";	
+	else 
+		d.style.opacity="0.0";	
+		
+	
+     isOpen=!isOpen;
+}
 </script>
 
-<!-- XMLHttpRequest - 웹브라우저에 기본적으로 있는 객체  -->
 </head>
 <body>
-<h1>CSS Properties(transition + position )</h1>
+<h1 style="text-align: center;">FILL THE SURFACE</h1>
 <hr>
+<!-- <div>
+	<p><span id="skill" style="opacity: 0.0">CSS AJAX(XMLHttpRequest) JAVA JAVASCRIPT</span></p>
+	<span id="handle" onclick="handleBtn_click(event)">★SKILL</span>
+</div> -->
 <button id="start" onclick="startBtn_click(event)">start</button>
 <button id="clear" onclick="clearBtn_click(event)">clear</button>
 <hr>
@@ -142,19 +132,6 @@ function clearBtn_click(e){
 </tbody>
 </table>
 
-<hr>
-
-<table id="surface2">
-<c:forEach var="i" begin="0" end="19" >
-<tr>
-	<c:forEach var="j" begin="0" end="39">
-		<c:set var="c" value="${surface[i][j]}" />
-	<%--  <td style="background: ${surface[i][j].bg}">${surface[i][j].ch}</td> --%>
-	 <td style="background: ${c.bg}">${c.ch}</td>
-	</c:forEach>
-</tr>
-</c:forEach>
-</table>
 
 
 </body>
