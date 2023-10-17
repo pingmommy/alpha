@@ -6,6 +6,42 @@ import sleep from 'es7-sleep';
  import "./css/fill.css";
 
  
+ class Fill extends Alpha {
+	 
+	 left = 0;
+	 top = 0;
+	 zIndex =0;
+	 scale =1;
+	 
+	 constructor () {
+		super();	
+		this.init(); 
+	 }
+	 
+	 init() {
+		 this.left = parseInt(Math.random()*500+400);
+		  this.top = 100;
+		 /*this.top = parseInt(Math.random()*20+1);*/
+		  this.zIndex =0;
+		  this.scale =3;
+	 }
+	 
+	 clear() {
+		 this.left = 0;
+		 this.top = 0;
+		 this.zIndex =0;
+		 this.scale =1;
+	 }
+	 
+	   /* 되나 안 되나 고정된 값으로 테스트함. 
+	   
+	    this.left = 700;
+		 this.top = 100;*/
+	 }
+	 
+	 
+ 
+ 
 
 class App extends React.Component {
 	
@@ -14,12 +50,11 @@ class App extends React.Component {
 		for(let i=0; i<20; i++){
 			this.state.surface[i]=[];
 			for(let j=0; j<40;j++){
-				let alpha =new Alpha();
-				alpha.fg='black';
-				alpha.bg='black';
+				let alpha =new Fill();
 				this.state.surface[i][j]=alpha;	
 			}
 					}
+			this.init();		
 	console.log(this.state.surface);
 	}
 	
@@ -32,20 +67,24 @@ class App extends React.Component {
 	}
 	
 	async fill() {
+		
+		let zIdex =1;
+		
 		for(;;){
 			
 			
 			this.state.forecount++;
 			
-			let alpha = new Alpha();
+			let alpha = new Fill();
 			let a =this.state.surface[alpha.line-1][alpha.column-1];
 			
 			if(a.fg =='black' && a.bg == 'black') {
 				this.state.count++;
+				alpha.clear();
+				alpha.zIndex = zIdex++;
+				this.state.surface[alpha.line-1][alpha.column-1] = alpha;
 			
 			}		
-			
-			this.state.surface[alpha.line-1][alpha.column-1] = alpha;
 			
 			this.forceUpdate();
 			
@@ -71,20 +110,26 @@ class App extends React.Component {
 		}
 	}
 	
-	btnCreate_click(e){
-		this.state.disabled = true;	
+	init() {
 		
-		for(let i=0; i<20; i++){
+			for(let i=0; i<20; i++){
 			for(let j=0; j<40; j++){
 				this.state.surface[i][j].fg ='black';
 				this.state.surface[i][j].bg ='black';
-				
+				this.state.surface[i][j].init();
 			}
 		}
 		
 		this.state.forecount=0;
 		this.state.count=0;
 		this.state.ellipse=0;
+		
+	}
+	
+	btnCreate_click(e){
+		this.state.disabled = true;	
+		
+		this.init();
 		this.forceUpdate();
 		
 		this.fill();
@@ -97,7 +142,7 @@ class App extends React.Component {
 			<button disabled={this.state.disabled} onClick={event => this.btnCreate_click(event)}>start</button>
 			
 			<hr/>
-			<table border={1}>
+			<table  border={1}>
 			<thead>
 			<tr>
 				<th>forecount</th>
@@ -112,8 +157,8 @@ class App extends React.Component {
 					<td>{this.state.ellipse}</td>
 				</tr>
 			</tbody>
-			</table>
-			<table className='collapse'
+			</table >
+			<table id='surface' className='collapse'
 /*			<table style={{borderCollapse:'collapse', fontFamily:'monospace',fontSize:'2em'} }*/
 			onMouseDown={event=> event.preventDefault()}
 			onContextMenu={event => event.preventDefault()}
@@ -124,7 +169,14 @@ class App extends React.Component {
 						<tr key={k}>
 						{
 							row.map((v,k) =>
-							<td key={k} style={{color:v.fg, background:v.bg}}>{v.ch}</td>
+							<td key={k} style={{
+								color:v.fg, 
+								background:v.bg,
+								left:v.left,
+								top:v.top,
+								zIndex:v.zIndex,
+								transform:`scale(${v.scale})`
+								}}>{v.ch}</td>
 						 )}
 						
 						</tr>
