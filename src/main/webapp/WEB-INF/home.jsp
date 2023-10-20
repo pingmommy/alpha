@@ -180,7 +180,7 @@ $(document).ready(function(){
 			<li class="sub-item"><a target="content" href="/alpha/cross">cross</a></li>
 			<li class="sub-item"><a target="content" href="/alpha/race">race</a></li>
 			<li class="sub-item"><a target="content" href="/alpha/zigzag">zigzag</a></li>
-			<li class="sub-item"><a target="content" href="/alpha/earthworm">earthworm</a></li>
+			<li class="sub-item"><a target="content" href="/earthworm.jsp">earthworm</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">

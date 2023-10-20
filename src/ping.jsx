@@ -154,7 +154,7 @@ class App extends React.Component {
 								position:v.position,
 								left:v.left,
 								top:v.top,
-								transition:`left ${v.speed}ms`
+								transition:`left ${v.speed}ms linear`
 								}}>{v.ch}</td>
 						 )}
 						
