@@ -16,6 +16,25 @@ table {
  	/* border-left:15px solid green; */
  	margin: 0px auto;
 }
+
+.button{
+	margin-left: 950px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+.shape {
+ 	width: 120px;
+ 	height: 50px;
+ 	font-size: 2em;
+ 	font-weight: bold;
+ 	border-radius: 20px;
+}
+
+.line{
+	border: 20px solid lightpink;
+}
+
 </style>
 
 <script type="text/javascript">
@@ -95,17 +114,10 @@ function handleBtn_click(e) {
 </script>
 
 </head>
-<body>
+<body style="background: white; ">
 <h1 style="text-align: center;">FILL THE SURFACE</h1>
-<hr>
-<!-- <div>
-	<p><span id="skill" style="opacity: 0.0">CSS AJAX(XMLHttpRequest) JAVA JAVASCRIPT</span></p>
-	<span id="handle" onclick="handleBtn_click(event)">★SKILL</span>
-</div> -->
-<button id="start" onclick="startBtn_click(event)">start</button>
-<button id="clear" onclick="clearBtn_click(event)">clear</button>
-<hr>
-<table border="1" width="500">
+
+<table width="500">
 <thead>
 <tr>
  <th>forecount</th><th>count</th><th>second</th>
@@ -113,14 +125,14 @@ function handleBtn_click(e) {
 </thead>
 <tbody>
 <tr>
-  <td id="forecount" align="right">0</td>
-  <td id="count" align="right">0</td>
-  <td id="seconds" align="right">0</td>
+  <td id="forecount" align="center">0</td>
+  <td id="count" align="center">0</td>
+  <td id="seconds" align="center">0</td>
 </tr>
 </tbody>
 </table>
-<hr>
-<table id="surface" onmousedown="event.preventDefault();">
+
+<table id="surface" onmousedown="event.preventDefault();" class="line">
  <tbody>
 	<c:forEach var="row" items="${surface}">
 	<tr>
@@ -131,8 +143,7 @@ function handleBtn_click(e) {
 	</c:forEach>
 </tbody>
 </table>
-
-
-
+<button id="start" onclick="startBtn_click(event)" class="button shape">start</button>
+<button id="clear" onclick="clearBtn_click(event)" class="shape">clear</button>
 </body>
 </html>

@@ -12,6 +12,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
 
+html{
+	background: Turquoise;
+	
+}
+
 nav {
  /*  border: 5px dashed yellow; */
  	height: 150px;
@@ -53,7 +58,7 @@ li>div {
 
 .menu-title {
  	padding: 15px 10px;
- 	font-size: 25px;
+ 	font-size: 35px;
  	/* font-weight: bold; */
  	color: white;
  	font-family: 'Black Han Sans', sans-serif;
@@ -226,7 +231,7 @@ $(document).ready(function(){
 	</li>
 </ul>
 </nav>
-<iframe src="/hello.jsp" 
+<iframe src="/hello2.jsp" 
         name="content" 
         width="100%" 
         sendbox="allow-same-origin"
