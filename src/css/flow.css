@@ -1,0 +1,23 @@
+#surface  td {	
+	position: absolute;	
+	transition: left 100ms, top 100ms, transform 2s;
+}
+
+.collapse{
+	border-collapse:collapse;
+	font-family: monospace;
+	font-size: 2em;
+	
+}
+
+
+body{
+	height: 1000px;
+	/*border: 2px solid red;*/
+}
+
+#surface  {
+	position: relative;
+	border: 1px solid red;
+}
+
