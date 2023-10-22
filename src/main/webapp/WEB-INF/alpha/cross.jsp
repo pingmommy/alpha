@@ -83,7 +83,7 @@ class Cross{
 	   	this.alpha = await response.json();
 	   	this.alpha.line=10;
 	   	this.alpha.column=20;
-		console.log(this.alpha);
+		/* console.log(this.alpha); */
 		
 		this.show();
 		
@@ -110,6 +110,24 @@ window.onload = () => {
 		let cross = new Cross();
 		cross.run();
 	}
+	
+	d = document.querySelector('input');
+	d.onchange= async function() {
+	    
+		let c = d.checked;
+
+	    if(c){
+	    	
+	    	for(;;){
+	      /*   console.log("ddd"); */
+	        await sleep(500);
+	        
+	        let cross = new Cross();
+			cross.run();
+				
+	    	}
+	    }
+	}
 
 }
 </script>
@@ -120,7 +138,7 @@ window.onload = () => {
 <h1>Async/await +class 실습</h1>
 <hr>
 <button id="createbtn">create</button>
-<input type="checkbox" id="auto" name="auto" >
+<input type="checkbox" id="auto" name="auto">
 <label>AUTO</label>
 	<hr>
 <table id="surface" onmousedown="event.preventDefault();" oncontextmenu="event.preventDefault();">

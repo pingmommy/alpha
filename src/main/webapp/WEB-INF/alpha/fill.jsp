@@ -12,15 +12,13 @@
 table {
 	border-collapse:collapse;
  	font-family: monospace;
- 	font-size: 2em;
+ 	font-size: 1.5em;
  	/* border-left:15px solid green; */
  	margin: 0px auto;
 }
 
 .button{
-	margin-left: 950px;
-	margin-top: 30px;
-	margin-bottom: 50px;
+	margin: 30px auto;
 }
 
 .shape {
@@ -29,6 +27,7 @@ table {
  	font-size: 2em;
  	font-weight: bold;
  	border-radius: 20px;
+ 	display: inline-block;
 }
 
 .line{
@@ -143,7 +142,9 @@ function handleBtn_click(e) {
 	</c:forEach>
 </tbody>
 </table>
-<button id="start" onclick="startBtn_click(event)" class="button shape">start</button>
-<button id="clear" onclick="clearBtn_click(event)" class="shape">clear</button>
+<div style="text-align: center;">
+	<button id="start" onclick="startBtn_click(event)" class="button shape">start</button>
+	<button id="clear" onclick="clearBtn_click(event)" class="shape">clear</button>
+</div>
 </body>
 </html>

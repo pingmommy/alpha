@@ -26,23 +26,40 @@ td {
 	text-align: right;
 }
 
-section > table {
+div {
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	
+}
+div > table {
 	float: left;
 	margin: 10px;
 }
+
+.center {
+	margin: 0px auto;
+}
+
 </style>
 
 <script type="text/javascript">
 
 $(function (){	 
+	a=[];
 	startbtn.onclick = e => {
 				
 		fetch('/alpha/data')
 		.then(r => r.json())
 		.then(alpha => {
 			console.log(alpha)
+				
+		a.push(alpha);
+		console.log(a);
 			race(alpha);					
 		}); }
+	
+	stat.onclick = list_click;
 	
 });
 
@@ -54,8 +71,7 @@ function race(alpha){
 	alpha.line =1;
 	alpha.column =1;
 	let direction = 0;  //0 :right 1: left 2: up 3: down 
-	
-	
+
 	
 	let td = table1.rows[alpha.line-1].cells[alpha.column-1]
 	td.style.color = alpha.fg;
@@ -137,24 +153,65 @@ function race(alpha){
 		}, 1000)
 	}
 }
+
+function list_click(e){
+	let td = e.target;
+
+	td.remove();
+	d= document.querySelector('#stat');
+	for(let i=0; i<d.tBodies[0].rows.length;i++){
+	    if(d.tBodies[0].rows[i].cells.length<3){
+	       d.tBodies[0].rows[i].remove();
+	   }
+	}
+	console.log(this);
+	console.log(a);
+
+	console.log(e.target.innerText);
+	
+/* 	for(let i=0;i<a.length;i++){
+		if(a[i].bg== 'Cyan'){
+			a[i].bg='black';
+		}
+	}
+	 */
+	for(let i=0;i<a.length;i++){
+		if(a[i].ch== 'Q'){
+			a[i].bg='black';
+		}
+	}
+	
+	
+	 
+	 /* 참조 
+	 for(let i = 0; i < arr.length; i++) {
+  if(arr[i] === 'b')  {
+    arr.splice(i, 1);
+    i--;
+  }
+}
+	 
+	 */
+}
+
 </script>
 
 </head>
-<body>
+<body style="background: white; ">
 <h1>Ajax = fetch 활용</h1>
 <hr>
 <button id="startbtn">start</button>
 
 <hr>
-<table border="1px" width="400" >
-	<th>round</th><th>count</th><th>second</th>
+<table class="center">
 <thead>
+	<th>round</th><th>count</th><th>second</th>
 </thead>
 <tbody>
 	<td id="round">0</td><td id="count">0</td><td id="ellipse">0</td>
 </tbody>
 </table>
-<section>
+<div style="text-align: center;">
 <table id="table1" onmousedown="event.preventDefault();" oncontextmenu="event.preventDefault();">
 <tbody>
 	<c:forEach var="i" begin="0" end="${surface.size()-1}">
@@ -176,6 +233,6 @@ function race(alpha){
  <tbody>
  </tbody>
 </table>
-</section>
+</div>
 </body>
 </html>
