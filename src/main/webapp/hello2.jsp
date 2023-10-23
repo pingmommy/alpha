@@ -35,6 +35,10 @@
   from {
     width: 0
   }
+  
+  to {
+    width: 28ch
+  }
 }
     
 @keyframes blink {

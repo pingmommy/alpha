@@ -20,7 +20,7 @@
 	<c:forEach var="list" items="${surface}"> 
 	 <tr>
 		<c:forEach var="alpha" items="${list}">
-			<td style="color:green; background: green; opacity: 0.7">${alpha.ch}</td>
+			<td style="color:black; background: black; opacity: 0.6">${alpha.ch}</td>
 		</c:forEach>
 	</tr>
 	</c:forEach>

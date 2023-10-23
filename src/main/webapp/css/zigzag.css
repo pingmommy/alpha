@@ -2,24 +2,15 @@
 #surface {
 	border-collapse: collapse;
 	font-family: monospace;
-	font-size: 2em;
-	box-shadow: 30px 30px 30px green;
-	
-	/*box-shadow: 30px(x축) 30px(y축) 30px(퍼짐정도) green;*/
-
+	font-size: 1.5em;
+	margin: 0px auto;
+	margin-bottom: 100px;
+	border: 15px solid yellow;
 }
 
 body {
-	background-image: url("/media/grass.jpg");
-	
-	/*
-	background-image: url("/media/fubao.jpg"), url("/media/twin.jpg");
-	background-repeat: no-repeat, repeat;
-	background-size: 100%, 100%;	
-	background-position: center;
-	background-position: top, bottom;
-	
-	*/
+	background:white;
+
 }
 
 #btncreate {

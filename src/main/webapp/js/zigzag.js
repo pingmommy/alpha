@@ -78,8 +78,8 @@
 	 
 	 hide(){
 		 let td = this.surface.rows[this.alpha.line-1].cells[this.alpha.column-1];
-		 td.style.color ='green';
-		 td.style.background ='green';
+		 td.style.color ='black';
+		 td.style.background ='black';
 	 }
 	 
 	 conflictcheck(){
