@@ -8,10 +8,10 @@
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <style type="text/css">
 
-  @import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@200&display=swap');
 
 .wrapper {
-  margin-top:300px;
+  margin-top:270px;
   height: 70px;
   /*This part is important for centering*/
   display: grid;
@@ -20,12 +20,12 @@
 }
 
 .typing-demo {
-  width: 28ch;
-  animation: typing 2s steps(28), blink .5s step-end infinite alternate;
+  width: 21ch;
+  animation: typing 2s steps(21), blink .5s step-end infinite alternate;
   white-space: nowrap;
   overflow: hidden;
   border-right: 3px solid;
-  font-family: monospace;
+  font-family: 'IBM Plex Sans KR', sans-serif,monospace;
   font-size: 5em;
   color: white;
  
@@ -36,9 +36,6 @@
     width: 0
   }
   
-  to {
-    width: 28ch
-  }
 }
     
 @keyframes blink {
@@ -48,7 +45,7 @@
 }
 
 .typing {
-	background: Turquoise;	
+	background: #5eecfa;	
 }
 
 .box{
@@ -105,7 +102,7 @@ from {color: pink;}
 <body>
 	<div class="wrapper typing">
     <div class="typing-demo ">
-       안녕하세요! 조아라입니다 :)
+       안녕하세요! 조아라입니다 :)♥
     </div>
 </div>
 <div class="box">

@@ -31,7 +31,7 @@
 <script type="text/javascript">
 $(function() {
 	for(let i=0; i<100 ; i++){
-		$('body').append('<img alt="xxx"/>');
+		$('body').append('<img alt="xxx"/>').css('background','white');
 	}
 	
 	//$('img').attr('src','http://via.placeholder.com/100X100');

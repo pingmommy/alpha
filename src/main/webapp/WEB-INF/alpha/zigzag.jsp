@@ -10,10 +10,8 @@
 <script type="text/javascript" src="/js/zigzag.js"></script>
 </head>
 <body>
-<h1>zigzag(class + fetch + async/await)</h1>
-<h2>external javascript(zigzag.js),css(zigzag.css)</h2>
-
-<button id="btncreate">create</button>
+<h1 style="text-align: center; color:#9af54c ">ZIGZAG ALPHA</h1>
+<button id="btncreate">CREATE</button>
 
 <table id="surface">
 	<tbody>

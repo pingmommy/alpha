@@ -6,15 +6,16 @@
 <head>
 <meta charset="UTF-8">
 <title>ani.fill</title>
+<link rel="stylesheet" href="/css/box.css">
 <style type="text/css">
 
-table {
+#surface {
 	border-collapse:collapse;
  	font-family: monospace;
  	font-size: 1.5em;
- 	/* border-left:15px solid green; */
- 	background: url("/media/favicon.png");
- 	background-repeat: repeat-x;
+ 	
+ 	margin-bottom: 50px;
+ 	margin-left: 250px;
 }
 
 #surface td {
@@ -25,6 +26,17 @@ table {
  	
  	top: 0px;
  	left:0px;
+}
+
+#out_div {
+display: flex;
+justify-content: flex-start;
+margin: 15px;
+margin-left: 250px;
+}
+
+#clear {
+	margin-right: 15px;
 }
 
 
@@ -88,27 +100,11 @@ function startBtn_click(e){
 		}, 10);
 }
 function clearBtn_click(e){
-	/* for(let i =0; i<surface.row.length; i++){
-		for(let j=0; j<surface.row[i].cells.length;j++){
-			surface.rows[i].cells[j].style.background='black';
-			surface.rows[i].cells[j].style.color='black';
-		}
-	} */
-	
-	/* for(let row of surface.rows){
-		for(let td of row.cells){
-			td.style.color ='black';
-			td.style.background ='black';
-		}
-	} */
-	/*유사배열이어서 배열처럼 쓰려면 Array.from을 써야 한다.  */
 	Array.from(surface.rows).forEach(function(row) {
 		Array.from(row.cells).forEach(function(td) {
 			td.style.color ='black';
 			td.style.background ='black';
 			td.style.left="0px";
-			//td.style.opacity="1.0"
-			
 		});
 	});
 	count.innerText =0;
@@ -119,16 +115,15 @@ function clearBtn_click(e){
 
 <!-- XMLHttpRequest - 웹브라우저에 기본적으로 있는 객체  -->
 </head>
-<body>
-<h1>Spring MVC + XMLHttpRequest</h1>
-<hr>
-<button id="start" onclick="startBtn_click(event)">start</button>
-<button id="clear" onclick="clearBtn_click(event)">clear</button>
-<hr>
-<table border="1" width="500">
+<body class="white">
+<h1 class="text_center t_green">AnimationFill-ALPHA</h1>
+<div id="out_div">
+<button id="start" onclick="startBtn_click(event)" class="shape">START</button>
+<button id="clear" onclick="clearBtn_click(event)" class="shape">CLEAR</button>
+<table width="200">
 <thead>
 <tr>
- <th>forecount</th><th>count</th><th>second</th>
+ <th>Forecount</th><th>Count</th><th>Second</th>
 </tr>
 </thead>
 <tbody>
@@ -139,8 +134,8 @@ function clearBtn_click(e){
 </tr>
 </tbody>
 </table>
-<hr>
-<table id="surface" onmousedown="event.preventDefault();">
+</div>
+<table id="surface" onmousedown="event.preventDefault();" class="l_pink">
  <tbody>
 	<c:forEach var="row" items="${surface}">
 	<tr>

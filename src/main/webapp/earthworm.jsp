@@ -6,13 +6,10 @@
 <head>
 <meta charset="UTF-8">
 <title>earthworm.jsp</title>
+<link rel="stylesheet" href="/css/box.css">
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 <style type="text/css">
-table {
- border-collapse: collapse;
- font-size: 2em;
- font-family: monospace;
-}
+
 </style>
 
 <script type="text/javascript">
@@ -197,12 +194,12 @@ class Fill {
 
 </script>
 </head>
-<body>
-<h1>EARTHWORM</h1>
-<hr>
-<button id="Btn">CREATE</button>
-<hr>
-<table id="surface">
+<body class="white">
+<h1 class="text_center t_blue">EARTHWORM</h1>
+
+<button id="Btn" class="button_2">CREATE</button>
+
+<table id="surface" class="margin_center l_yellow table_1" style="margin-bottom: 50px;">
 	<tbody>
 	<c:forEach var="i" begin="0" end="19">
 	  <tr>

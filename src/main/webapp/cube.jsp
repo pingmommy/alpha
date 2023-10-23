@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>cube4.jsp</title>
+<link rel="stylesheet" href="/css/box.css">
 <style type="text/css">
 
 body {
@@ -96,9 +97,9 @@ body {
 
 </style>
 </head>
-<body>
-<h2>CSS 3D 응용 큐브 만들기</h2>
-<hr>
+<body class="white">
+<h1 class="text_center t_green">CSS 3D 응용 큐브 만들기</h1>
+
 <section class="perspective">
 	<article class="cube">
 		<div class="base"></div>	

@@ -10,18 +10,19 @@
 <link rel="stylesheet" href="/css/cube.css">
 <style type="text/css">
 
-@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@300&display=swap');
+
 
 html{
-	background: Turquoise;
+	background: #5eecfa;
 	
 }
 
 nav {
- /*  border: 5px dashed yellow; */
+
  	height: 150px;
  	width: 100%;
- 	background: Turquoise;
+ 	background: #5eecfa;
  	position: fixed;
  }
 
@@ -61,7 +62,7 @@ li>div {
  	font-size: 35px;
  	/* font-weight: bold; */
  	color: white;
- 	font-family: 'Black Han Sans', sans-serif;
+ 	font-family: 'IBM Plex Sans KR', sans-serif;
  	 	
 }
 
@@ -90,10 +91,11 @@ li>div {
 	/* min width: 200px; */
 	flex-shrink: 0;
  	text-align: center; 
- 	background: Turquoise;	
+ 	background: #5eecfa;	
 }
 .menu-item:hover> .menu-title {
-	text-shadow: 10px 10px 3px black;
+	font-weight: bold;
+  	color: black;
 
 }
 

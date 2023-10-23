@@ -12,23 +12,20 @@
 	border-collapse: collapse;
 	font-size: 150%;
 	font-family: monospace;
-	
-	border: 20px solid pink;
-	
-	margin-bottom: 100px;
+	margin-bottom: 50px;
 }
 
 #surface td{
   opacity: 0.8
 }
 
-div.center{
- margin-bottom: 20px;
+div.text_center{
+ margin-bottom: 10px;
 }
 
 #div_auto {
 	display: inline-block; 
-	font-size: 2.0em;
+	font-size: 1.2em;
 }
 
 </style>
@@ -148,15 +145,15 @@ window.onload = () => {
 
 </head>
 <body class="white">
-<h1 class="center">CROSSING ALPHA</h1>
-<div class="center" >
-	<button id="createbtn" class="white shape">create</button>
+<h1 class="text_center t_green2">CROSSING ALPHA</h1>
+<div class="text_center" >
+	<button id="createbtn" class="white shape">CREATE</button>
 	<div id="div_auto" class="shape">
 	<input type="checkbox" id="auto" name="auto">
 	<label>AUTO</label>
 	</div>
 </div>	
-<table id="surface" onmousedown="event.preventDefault();" oncontextmenu="event.preventDefault();" class="table_1">
+<table id="surface" onmousedown="event.preventDefault();" oncontextmenu="event.preventDefault();" class="table_1 l_orange">
 	<tbody>
 	<c:forEach var="i" begin="0" end="${surface.size()-1}">
 		<tr>

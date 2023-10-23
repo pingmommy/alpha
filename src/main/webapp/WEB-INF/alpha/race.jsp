@@ -171,38 +171,20 @@ function list_click(e){
 
 	console.log(e.target.innerText);
 	
-/* 	for(let i=0;i<a.length;i++){
-		if(a[i].bg== 'Cyan'){
-			a[i].bg='black';
-		}
-	}
-	 */
 	for(let i=0;i<a.length;i++){
 		if(a[i].ch== 'Q'){
 			a[i].bg='black';
 		}
 	}
-	
-	
-	 
-	 /* 참조 
-	 for(let i = 0; i < arr.length; i++) {
-  if(arr[i] === 'b')  {
-    arr.splice(i, 1);
-    i--;
-  }
-}
-	 
-	 */
 }
 
 </script>
 
 </head>
 <body style="background: white; ">
-<h1 class="center">RAICING ALPHA</h1>
+<h1 class="text_center t_purple">RAICING ALPHA</h1>
 
-<button id="startbtn" class="button_2 green t-white">start</button>
+<button id="startbtn" class="button_2">start</button>
 
 <div style="text-align: center;">
 <table class="center">
