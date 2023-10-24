@@ -42,7 +42,7 @@ li{
  }
 
 li>div {
-/*   border: 4px dotted gray;  */
+ /*  border: 4px dotted gray;  */
  
 }
 
@@ -103,7 +103,7 @@ li>div {
 
 .menu-item:last-child {
 
-	margin-right:40px;
+	margin-right:50px;
 }
 
 
