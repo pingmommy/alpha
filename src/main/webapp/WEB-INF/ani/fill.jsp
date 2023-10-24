@@ -116,7 +116,7 @@ function clearBtn_click(e){
 <!-- XMLHttpRequest - 웹브라우저에 기본적으로 있는 객체  -->
 </head>
 <body class="white">
-<h1 class="text_center t_green">AnimationFill-ALPHA</h1>
+<h1 class="text_center t_purple">AnimationFill-ALPHA</h1>
 <div id="out_div">
 <button id="start" onclick="startBtn_click(event)" class="shape">START</button>
 <button id="clear" onclick="clearBtn_click(event)" class="shape">CLEAR</button>

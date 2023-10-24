@@ -98,7 +98,7 @@ body {
 </style>
 </head>
 <body class="white">
-<h1 class="text_center t_green">CSS 3D 응용 큐브 만들기</h1>
+<h1 class="text_center t_purple">CSS 3D 응용 큐브 만들기</h1>
 
 <section class="perspective">
 	<article class="cube">
