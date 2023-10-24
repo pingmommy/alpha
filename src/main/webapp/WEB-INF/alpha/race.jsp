@@ -182,9 +182,9 @@ function list_click(e){
 
 </head>
 <body style="background: white; ">
-<h1 class="text_center t_purple">RAICING ALPHA</h1>
+<h1 class="text_center t_green2">RAICING ALPHA</h1>
 
-<button id="startbtn" class="button_2">start</button>
+<button id="startbtn" class="button_2">START</button>
 
 <div style="text-align: center;">
 <table class="center">

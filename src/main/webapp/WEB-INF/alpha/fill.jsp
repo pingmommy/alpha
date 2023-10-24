@@ -20,10 +20,7 @@ table {
  	font-size: 1.5em;
  	border-radius: 20px;
  	display: inline-block;
-}
-
-.line{
-	border: 15px solid #fffe72;
+ 	background: white;
 }
 
 div.flex-center{
@@ -108,7 +105,7 @@ function handleBtn_click(e) {
 
 </head>
 <body style="background: white; ">
-<h1 style="text-align: center;" class="t_blue">FILL THE SURFACE</h1>
+<h1 style="text-align: center;" class="t_green2">FILL THE SURFACE</h1>
 <div class="flex-center">
 	<button id="start" onclick="startBtn_click(event)" class="button shape">START</button>
 	<button id="clear" onclick="clearBtn_click(event)" class="shape">CLEAR</button>
@@ -127,7 +124,7 @@ function handleBtn_click(e) {
 		</tbody>
 	</table>
 </div>
-<table id="surface" onmousedown="event.preventDefault();" class="line margin_center">
+<table id="surface" onmousedown="event.preventDefault();" class=" margin_center l_orange">
  <tbody>
 	<c:forEach var="row" items="${surface}">
 	<tr>

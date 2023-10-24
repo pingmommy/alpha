@@ -195,11 +195,11 @@ class Fill {
 </script>
 </head>
 <body class="white">
-<h1 class="text_center t_blue">EARTHWORM</h1>
+<h1 class="text_center t_green2">EARTHWORM</h1>
 
 <button id="Btn" class="button_2">CREATE</button>
 
-<table id="surface" class="margin_center l_yellow table_1" style="margin-bottom: 50px;">
+<table id="surface" class="margin_center l_orange table_1" style="margin-bottom: 50px;">
 	<tbody>
 	<c:forEach var="i" begin="0" end="19">
 	  <tr>

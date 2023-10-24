@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +29,7 @@ nav {
 
 ul{
 /*   border: 2px solid red; */  
-margin-top: 30px;
+	margin-top: 30px;
   
 }
 
@@ -41,35 +42,24 @@ li{
  }
 
 li>div {
- /* border: 4px dotted gray; */
+/*   border: 4px dotted gray;  */
  
 }
 
-/* <a>태그는 인라인태그임. */
-/* li>a {
-/*  border: 4px dotted purple; 
- padding: 5px;
- display: inline-block;
- font-size: 15px;
-  text-decoration: none;
-  color: black;
- 
-} */
 
 
 .menu-title {
  	padding: 15px 10px;
  	font-size: 35px;
- 	/* font-weight: bold; */
  	color: white;
  	font-family: 'IBM Plex Sans KR', sans-serif;
- 	 	
 }
 
-/* .menu-title:hover + .sub-menu {
+.menu-title > a {
+	text-decoration: none;
 	display: block;
-} 글자를 벗어나면 다시 하위 메뉴가 사라져서 선택할 수 없다. */
-
+	color: white;
+}
 
 
 .menu {
@@ -91,7 +81,8 @@ li>div {
 	/* min width: 200px; */
 	flex-shrink: 0;
  	text-align: center; 
- 	background: #5eecfa;	
+ 	background: #5eecfa;
+ 	text-decoration: none;	
 }
 .menu-item:hover> .menu-title {
 	font-weight: bold;
@@ -105,10 +96,16 @@ li>div {
 }
 
 
-.menu-item:last-child {
+.menu-item:nth-last-child(2) {
 	margin-left:auto;
-	margin-right:10px;
+	
 }
+
+.menu-item:last-child {
+
+	margin-right:40px;
+}
+
 
 .sub-menu {
 	max-height:0px;
@@ -228,9 +225,30 @@ $(document).ready(function(){
 			<li class="sub-item"><a target="content" href="/search">search</a></li>
 		</ol>
 	</li>
-	<li class="menu-item">
-	    <div class="menu-title">LOGIN</div>
-	</li>
+	<sec:authorize access="isAnonymous()">
+		<li class="menu-item">
+		    <div class="menu-title">
+		    	<a href="/login">LOGIN</a>
+		    </div>
+		</li>
+		<li class="menu-item">
+		    <div class="menu-title">
+		    	<a href="/login">REGISTER</a>
+		    </div>
+		</li>
+	</sec:authorize>
+	<sec:authorize access="isAuthenticated()">
+		<li class="menu-item">
+		    <div class="menu-title">
+		    	<a href="/logout">LOGOUT</a>
+		    </div>
+		</li>
+		<li class="menu-item">
+		    <div class="menu-title">
+		    	<a href="#"><sec:authentication property="name"/>님♥</a>
+		    </div>
+		</li>
+	</sec:authorize>
 </ul>
 </nav>
 <iframe src="/hello2.jsp" 
