@@ -139,25 +139,25 @@ class App extends React.Component {
 	render() {
 		return(
 			<>
-			<button disabled={this.state.disabled} onClick={event => this.btnCreate_click(event)}>start</button>
-			
-			<hr/>
-			<table  border={1}>
+			<div className="flex-center">
+			<button disabled={this.state.disabled} onClick={event => this.btnCreate_click(event)} className="shape">START</button>
+			<table>
 			<thead>
 			<tr>
-				<th>forecount</th>
-				<th>count</th>
-				<th>ellipse</th>
+				<th>Forecount</th>
+				<th>Count</th>
+				<th>Ellipse</th>
 			</tr>
 			</thead>
 			<tbody>
-				<tr>
+				<tr id='count_tr'>
 					<td>{this.state.forecount}</td>
 					<td>{this.state.count}</td>
 					<td>{this.state.ellipse}</td>
 				</tr>
 			</tbody>
 			</table >
+			</div>
 			<table id='surface' className='collapse'
 /*			<table style={{borderCollapse:'collapse', fontFamily:'monospace',fontSize:'2em'} }*/
 			onMouseDown={event=> event.preventDefault()}

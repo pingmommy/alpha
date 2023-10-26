@@ -14,6 +14,7 @@
 body{
 	height: 1000px;
 	/*border: 2px solid red;*/
+	background:white;	
 }
 
 #surface  {
@@ -21,3 +22,16 @@ body{
 	border: 1px solid red;
 }
 
+.shape {
+ 	width: 120px;
+ 	height: 50px;
+ 	font-size: 1.5em;
+ 	border-radius: 20px;	
+ 	background: white;
+ 	margin-right: 5px;
+ 	margin-bottom: 15px;
+}
+
+h1{
+	color: #0961af;
+}

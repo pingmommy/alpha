@@ -134,11 +134,9 @@ class App extends React.Component {
 	render() {
 		return(
 			<>
-			<button disabled={this.state.disabled} onClick={event => this.btnStart_click(event)}>START</button>
-			<button  disabled={!this.state.disabled} onClick={event => this.btnStop_click(event)}>STOP</button>
+			<button disabled={this.state.disabled} onClick={event => this.btnStart_click(event)} className='shape'>START</button>
+			<button  disabled={!this.state.disabled} onClick={event => this.btnStop_click(event)} className='shape'>STOP</button>
 			
-				
-			<hr/>
 			<table id='surface' className='collapse'
 				onMouseDown={event=> event.preventDefault()}
 				onContextMenu={event => event.preventDefault()}>

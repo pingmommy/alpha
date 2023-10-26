@@ -10,16 +10,15 @@
 <script type="module" src="/js/react/flow.js"></script>
 </head>
 <body>
-<h1>flow</h1>
-<hr>
+<h1>REACT_FLOW</h1>
+
 <table class="collapse">
 	<tbody>
 		<tr>
-		 <td style="color: red; background: blue">A</td>
+		 <td style="color: red; background: blue; opacity:0.0;" >A</td>
 		</tr>
 	</tbody>
 </table>
-<hr>
 <section id="root"></section>
 </body>
 </html>

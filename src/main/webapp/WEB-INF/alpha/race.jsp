@@ -13,9 +13,7 @@
 	border-collapse: collapse;
 	font-size: 2em;
 	font-family: monospace;
-	background-image: url("/media/fubao.jpg");
-	background-size: 100%;
-	background-repeat: no-repeat;
+	background: black;
 	margin-bottom: 50px;
 }
 
@@ -46,29 +44,11 @@ div > table {
 </style>
 
 <script type="text/javascript">
+num=0;
 
-$(function (){	 
-	a=[];
-	startbtn.onclick = e => {
-				
-		fetch('/alpha/data')
-		.then(r => r.json())
-		.then(alpha => {
-			console.log(alpha)
-				
-		a.push(alpha);
-		console.log(a);
-			race(alpha);					
-		}); }
-	
-	stat.onclick = list_click;
-	
-});
-
+tid=[];
 function race(alpha){
 	
-	console.log(alpha);
-	//let cnt =0;
 	let speed = Math.random()*1000+10;
 	alpha.line =1;
 	alpha.column =1;
@@ -100,10 +80,10 @@ function race(alpha){
 	 tdCount.innerText = 0;
 	 
 	 
-	
-	
-	setTimeout(function move() {
 
+	
+	tt = setInterval(function () {
+	/* console.log(tid); */
 	let td = table1.rows[alpha.line-1].cells[alpha.column-1]
 	td.style.color = 'black';
 	td.style.background = 'black';
@@ -144,9 +124,10 @@ function race(alpha){
 	td.style.color = alpha.fg;
 	td.style.background = alpha.bg;
 	td.innerText = alpha.ch;
-	
-	setTimeout(move, 100)
 	}, 100);
+	
+	tid.push(tt);
+	console.log(tid);
 	
 	count.innerText = ++count.innerText;
 	if(count.innerText==1){
@@ -156,33 +137,49 @@ function race(alpha){
 	}
 }
 
+
 function list_click(e){
 	let td = e.target;
-
+	console.log("targetsibling : "+e.target.previousElementSibling.innerText);
+	num = e.target.previousElementSibling.innerText-1;
+	console.log(num);
+	console.log(a[num]);
+	let d=$('#table1')[0].rows[a[num].line-1].cells[a[num].column-1];
+	 d.style.visibility='hidden';
 	td.remove();
+	
 	d= document.querySelector('#stat');
 	for(let i=0; i<d.tBodies[0].rows.length;i++){
 	    if(d.tBodies[0].rows[i].cells.length<3){
 	       d.tBodies[0].rows[i].remove();
-	   }
-	}
-	console.log(this);
-	console.log(a);
-
-	console.log(e.target.innerText);
-	
-	for(let i=0;i<a.length;i++){
-		if(a[i].ch== 'Q'){
-			a[i].bg='black';
 		}
 	}
+	      
+
 }
+
+$(function (){	 
+	a=[];
+	
+	startbtn.onclick = e => {
+				
+		fetch('/alpha/data')
+		.then(r => r.json())
+		.then(alpha => {
+		   a.push(alpha);
+		console.log("buttonEvent"+a);
+			race(alpha);					
+		}); }
+	
+	tb.onclick = e=>{ list_click(e); clearInterval(tid[num])};
+	
+});
 
 </script>
 
 </head>
 <body style="background: white; ">
-<h1 class="text_center t_green2">RAICING ALPHA</h1>
+<h1 class="text_center t_green2">RACING ALPHA</h1>
 
 <button id="startbtn" class="button_2">START</button>
 
@@ -195,25 +192,25 @@ function list_click(e){
 	<td id="round">0</td><td id="count">0</td><td id="ellipse">0</td>
 </tbody>
 </table>
-<table id="table1" onmousedown="event.preventDefault();" oncontextmenu="event.preventDefault();">
+<table id="table1" onmousedown="event.preventDefault();" oncontextmenu="event.preventDefault();" class="l_orange">
 <tbody>
 	<c:forEach var="i" begin="0" end="${surface.size()-1}">
 		<tr>
 		<c:forEach var="j" begin="0" end="${surface.get(i).size()-1}">
 			<c:set var="alpha" value="${surface[i][j]}" />
-			<td style="background:black; color:black; opacity:0.5">${alpha.ch}</td>			
+			<td style="background:black; color:black;">${alpha.ch}</td>			
 		</c:forEach>
 		</tr>
 	</c:forEach>
 </tbody>
 </table>
-<table width="200"  id="stat">
+<table width="400"  id="stat">
  <thead>
  <tr>
  	<th>no</th><th>Alpha</th><th>roundCount</th>
  </tr>
  </thead>
- <tbody>
+ <tbody id="tb">
  </tbody>
 </table>
 </div>

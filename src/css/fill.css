@@ -18,3 +18,34 @@ body{
 	height: 2000px;
 	background:white;	
 }
+
+h1{
+	text-align:center;
+	color: #0961af;	
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center;
+}
+
+.shape {
+ 	width: 120px;
+ 	height: 50px;
+ 	font-size: 1.5em;
+ 	border-radius: 20px;	
+ 	background: white;
+ 	margin-right: 20px;
+}
+
+th {
+	font-size: 1.5em;
+	text-align: center;
+	
+}
+
+#count_tr>td {
+	font-size: 1.5em;
+	text-align: center;
+
+}

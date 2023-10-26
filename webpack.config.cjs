@@ -6,6 +6,8 @@ module.exports = {
         move: "./src/move.jsx",
         flow:"./src/flow.jsx",
         ping:"./src/ping.jsx",
+        cross:"./src/cross.jsx",
+        dept:"./src/dept/App.jsx",
     },
     output: {
         filename: "[name].js",

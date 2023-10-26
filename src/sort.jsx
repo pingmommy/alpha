@@ -203,20 +203,19 @@ class App extends React.Component {
 	render() {
 		return(
 			<>
-			<button disabled={this.state.disabled} onClick={event => this.btnStart_click(event)}>start</button>
-			
-			<hr/>
-			<label>ROW[0][0]</label>
-			<input name='sort' type='radio' onChange={() =>this.onSelect(1) } checked={this.sortNum==1}/>
-			<label>ROW[20][0]</label>
-			<input name='sort' type='radio' onChange={() => this.onSelect(2)}   checked={this.sortNum==2}/>
-			<label>ROW[20][40]</label>
-			<input name='sort' type='radio' onChange={() => this.onSelect(3) }  checked={this.sortNum==3}/>
-			<label>COLUMN[0][0]</label>
-			<input name='sort' type='radio' onChange={() =>this.onSelect(4) }  checked={this.sortNum==4}/>
-			<label>COLUMN[0][0]</label>
-			<input name='sort' type='radio' onChange={() =>this.onSelect(5) }  checked={this.sortNum==5}/>
-
+			<div className="flex-center">
+				<button disabled={this.state.disabled} onClick={event => this.btnStart_click(event)} className="shape">START</button>
+				<label>ROW[0][0]</label>
+				<input name='sort' type='radio' onChange={() =>this.onSelect(1) } checked={this.sortNum==1}/>
+				<label>ROW[20][0]</label>
+				<input name='sort' type='radio' onChange={() => this.onSelect(2)}   checked={this.sortNum==2}/>
+				<label>ROW[20][40]</label>
+				<input name='sort' type='radio' onChange={() => this.onSelect(3) }  checked={this.sortNum==3}/>
+				<label>COLUMN[0][0]</label>
+				<input name='sort' type='radio' onChange={() =>this.onSelect(4) }  checked={this.sortNum==4}/>
+				<label>COLUMN[0][0]</label>
+				<input name='sort' type='radio' onChange={() =>this.onSelect(5) }  checked={this.sortNum==5}/>
+			</div>
 			<table id='surface' className='collapse'
 /*			<table style={{borderCollapse:'collapse', fontFamily:'monospace',fontSize:'2em'} }*/
 			onMouseDown={event=> event.preventDefault()}

@@ -12,7 +12,6 @@
 	border-collapse: collapse;
 	font-size: 150%;
 	font-family: monospace;
-	border: 20px solid pink;
 	background: black;
 	margin-bottom: 50px;
 }
@@ -26,11 +25,21 @@ div.center{
 	display: inline-block; 
 	font-size: 2.0em;
 	padding: 5px 0px 0px 0px ;
-	/* margin-bottom: 10px; */
-	
-	
+	/* margin-bottom: 10px; */	
 }
 
+.vibration{
+	animation: vibration 0.1s infinite;
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(2deg);
+  }
+  to {
+    transform: rotate(-2deg);
+  }
+}
 </style>
 <script type="text/javascript">
 
@@ -86,9 +95,12 @@ class Cross{
 	   
 	   
 	  if(this.alpha.column==0 || this.alpha.line==0 || this.alpha.column==41 || this.alpha.line==21){
-		   return false;
-	   }
-	  
+		  surface.rows[0].cells[19].style.visibility ='hidden';
+		  surface.rows[19].cells[19].style.visibility ='hidden';
+		  surface.rows[9].cells[0].style.visibility ='hidden';
+		  surface.rows[9].cells[39].style.visibility ='hidden';   
+		  return false;
+	   }	  
 	  
 	     this.show();
 	     return true;
@@ -104,28 +116,32 @@ class Cross{
 		
 		this.show();
 		
-	  for(;;){
-		 
+	  for(;;){		 
 		
 		 await sleep(500);
 		 
 		 if(!this.move()){
 			 break;
-		 }
-		 
-		
-		}
+		 }		 	
+	   }
 	}
-  
-  
 }
 
+function vibration(){
+	console.log("ccc");
+	  surface.classList.add("vibration");
+	
+	setTimeout(function(){
+		surface.classList.remove("vibration");
+	},400);
+}
 
 window.onload = () => {
 	
 	createbtn.onclick = () =>{
 		let cross = new Cross();
 		cross.run();
+		vibration();
 	}
 
 }
@@ -134,11 +150,11 @@ window.onload = () => {
 
 </head>
 <body class="white">
-<h1 class="text_center t_purple">Ani ALPHA</h1>
+<h1 class="text_center t_purple">AnimationCROSS ALPHA</h1>
 
 	<button id="createbtn" class="button_2">create</button>
 		
-<table id="surface" onmousedown="event.preventDefault();" class="margin_center">
+<table id="surface" onmousedown="event.preventDefault();" class="margin_center l_pink">
  <tbody>
 	<c:forEach var="row" items="${surface}">
 	<tr>

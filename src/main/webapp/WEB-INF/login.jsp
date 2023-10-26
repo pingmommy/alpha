@@ -25,7 +25,7 @@ section {
 .input_box > .first {
 	background: transparent;
 	border: none;
-	border-bottom: 3px solid red;
+	border-bottom: 3px solid gray;
 	padding: 20px 10px;
 	font-size: 20px;
 	width: 100%
@@ -34,7 +34,17 @@ section {
 
 .box{
   border-radius: 15px;
-  background: lightpink;
+  background: #5eecfa;
+  width: 60%;
+  margin: 10px auto;
+  padding: 15px 0px;
+  text-align: center;
+}
+
+
+.box:hover{
+  border-radius: 15px;
+  background: gray;
   width: 60%;
   margin: 10px auto;
   padding: 15px 0px;
@@ -63,7 +73,7 @@ section {
 <title>login</title>
 </head>
 <body>
-<h1>LOGIN</h1>
+<h1 style="text-align: center; margin-top: 100px;">LOGIN</h1>
 <hr>
 <c:if test="${param.error==''}">
 	<div class="error">사용자 ID 또는 비밀번호를 확인해주세요.</div>

@@ -10,8 +10,7 @@
 <script type="module" src="/js/react/sort.js"></script>
 </head>
 <body>
-<h1>sort</h1>
-<hr>
+<h1>REACT_SORT</h1>
 <section id="root"></section>
 </body>
 </html>

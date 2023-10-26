@@ -1,0 +1,34 @@
+
+
+body{
+	height: 1000px;
+	/*border: 2px solid red;*/
+	background:white;	
+}
+
+#table1{
+	border: 15px solid #fffe72;
+}
+
+div{
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+
+h1{
+	text-align:center;
+	color: #0961af;	
+}
+
+.shape {
+ 	width: 120px;
+ 	height: 50px;
+ 	font-size: 1.5em;
+ 	border-radius: 20px;	
+ 	background: white;
+ 	margin-right: 5px;
+  	margin-bottom: 15px;
+
+}
+

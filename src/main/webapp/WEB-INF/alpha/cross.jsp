@@ -130,7 +130,7 @@ window.onload = () => {
 	    	
 	    	for(;;){
 	      /*   console.log("ddd"); */
-	        await sleep(500);
+	        await sleep(100);
 	        
 	        let cross = new Cross();
 			cross.run();

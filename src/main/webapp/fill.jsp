@@ -9,8 +9,8 @@
 <script type="module" src="/js/react/fill.js"></script>
 </head>
 <body>
-<h1>fill</h1>
-<hr>
+<h1>REACT-FILL</h1>
+
 <section id="root"></section>
 </body>
 </html>

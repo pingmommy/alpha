@@ -107,10 +107,10 @@ btnUp_click(e){
 	render() {
 		return(
 			<>
-			<button  onClick={event => this.btnLeft_click(event)}>LEFT</button>
-			<button  onClick={event => this.btnRight_click(event)}>RIGHT</button>
-			<button  onClick={event => this.btnUp_click(event)}>UP</button>
-			<button  onClick={event => this.btnDown_click(event)}>DOWN</button>
+			<button  onClick={event => this.btnLeft_click(event)} className='shape'>LEFT</button>
+			<button  onClick={event => this.btnRight_click(event)} className='shape'>RIGHT</button>
+			<button  onClick={event => this.btnUp_click(event)} className='shape'>UP</button>
+			<button  onClick={event => this.btnDown_click(event)} className='shape'>DOWN</button>
 			<select on onChange={ event => this.state.rowNum = event.target.value}>
 				{
 					this.state.surface.map((row,i) =>
@@ -118,8 +118,7 @@ btnUp_click(e){
 					)
 				}
 			</select>
-			
-			<hr/>
+		
 			<table id='surface' className='collapse'
 				onMouseDown={event=> event.preventDefault()}
 				onContextMenu={event => event.preventDefault()}>
