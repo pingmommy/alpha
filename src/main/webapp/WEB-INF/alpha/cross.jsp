@@ -124,19 +124,16 @@ window.onload = () => {
 	d = document.querySelector('input');
 	d.onchange= async function() {
 	    
-		let c = d.checked;
-
-	    if(c){
-	    	
-	    	for(;;){
-	      /*   console.log("ddd"); */
-	        await sleep(100);
-	        
-	        let cross = new Cross();
-			cross.run();
-				
-	    	}
-	    }
+		c = d.checked;
+		console.log(c);
+		
+		while(c){
+		      console.log("ddd"); 
+		        await sleep(100);
+		        
+		        let cross = new Cross();
+				cross.run();
+			}
 	}
 
 }
