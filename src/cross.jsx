@@ -26,7 +26,9 @@ class Cross extends Alpha {
 	
 	show() {
 		this.surface.state.rect[this.line-1][this.column-1]= this;
+		console.log(this);
 		this.surface.forceUpdate();
+		
 	}
 	
 	hide() {

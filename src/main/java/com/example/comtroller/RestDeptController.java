@@ -60,7 +60,7 @@ public class RestDeptController {
 			response = new ResponseEntity<Object>(body, HttpStatus.OK);
 		}catch(DuplicateKeyException e) {
 			body.put("result","error");
-			body.put("messege", "존재하는 부서입니다.");
+			body.put("message", "존재하는 부서입니다.");
 			response = new ResponseEntity<Object>(body,HttpStatus.INTERNAL_SERVER_ERROR);
 		}catch(Exception e) {
 			body.put("result","error");
