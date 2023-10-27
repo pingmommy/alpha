@@ -206,6 +206,7 @@ $(document).ready(function(){
 			<li class="sub-item"><a target="content" href="/race.jsp">race</a></li>
 			<li class="sub-item"><a target="content" href="/flow.jsp">flow</a></li>
 			<li class="sub-item"><a target="content" href="/ping.jsp">ping</a></li>
+			<li class="sub-item"><a target="content" href="/rest/dept">dept</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
