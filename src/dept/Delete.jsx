@@ -20,7 +20,7 @@ class Delete extends React.Component{
 		let response = await fetch('/rest/dept',{
 			method : 'DELETE',
 			headers:{
-				'Cotent-Type':'application/json',
+				'Content-Type':'application/json',
 			},
 			body:JSON.stringify(this.state.dept)
 		});
