@@ -7,6 +7,7 @@ module.exports = {
         flow:"./src/flow.jsx",
         ping:"./src/ping.jsx",
         cross:"./src/cross.jsx",
+        race:"./src/race.jsx",
         dept:"./src/dept/App.jsx",
     },
     output: {
