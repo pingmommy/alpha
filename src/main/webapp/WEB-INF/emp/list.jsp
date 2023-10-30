@@ -6,9 +6,44 @@
 <head>
 <meta charset="UTF-8">
 <title>EmpList</title>
+<link rel="stylesheet" href="/css/box.css">
+<style type="text/css">
+#input {
+	border-radius: 5px;
+	border: none;
+	background: lightgrey;
+	font-size: 1.2em;
+}
+
+#input:hover {
+	background: grey;
+	color: white;
+}
+
+td {
+	border-bottom: 3px solid lightgrey;
+	height: 40px;
+}
+
+th {
+  height : 40px;
+  border-bottom: 5px solid grey;
+  font-size: 15pt;
+ }
+
+div{
+ padding: 10px;
+ background: #dffbfe;
+ 
+}
+	
+</style>
 </head>
-<form action="/emp/list">
-	<select name="deptno">
+<body class="white" style="height: 1000px;">
+<h1 class="text_center">직원정보</h1>
+<div>
+<form action="/emp/list" class="text_center">
+	<select name="deptno" style="width: 100px; height: 35px;">
 		<c:choose>	
 			<c:when test="${empty param.deptno}">
 				<option value="" selected="selected">전체부서</option>
@@ -28,34 +63,34 @@
 		</c:choose>
 		</c:forEach>
 	</select>
-	<input type="text" name="search">
-	<input type="submit">
+	<input type="text" name="search"  style="width: 300px; height: 30px;">
+	<input id="input" type="submit" value="검색" style="width: 120px; height: 40px;">
 </form>
-<body>
-<table border="1" width="700">
+</div>
+<table width="800" class="margin_center" style="margin-top: 30px;">
 <thead>
-	<th>empno</th>
-	<th>ename</th>
-	<th>gender</th>
-	<th>job</th>
-	<th>mgr</th>
-	<th>hiredate</th>
-	<th>sal</th>
-	<th>comm</th>
-	<th>deptno</th>
+	<th>사  번</th>
+	<th>직원명</th>
+	<th>성  별</th>
+	<th>직  급</th>
+	<th>직속상사사번</th>
+	<th>입사일</th>
+	<th>연  봉</th>
+	<th>커미션</th>
+	<th>부서번호</th>
 	</thead>
 <tbody>
 	<c:forEach var="emp" items="${list}">
 	<tr>
-		<td>${emp.empno}</td>
-		<td>${emp.ename}</td>
+		<td style="text-align: center;">${emp.empno}</td>
+		<td style="text-align: center;">${emp.ename}</td>
 		<td align="center">${emp.gender}</td>
-		<td>${emp.job}</td>
-		<td>${emp.mgr}</td>
-		<td>${emp.hiredate}</td>
-		<td align="right">${emp.sal}</td>
-		<td align="right">${emp.comm}</td>
-		<td>${emp.deptno}</td>
+		<td style="text-align: center;">${emp.job}</td>
+		<td style="text-align: right; padding-right: 15px;">${emp.mgr}</td>
+		<td style="text-align: right; padding-right: 15px;">${emp.hiredate}</td>
+		<td style="text-align: right; padding-right: 15px;">${emp.sal}</td>
+		<td style="text-align: right; padding-right: 15px;">${emp.comm}</td>
+		<td style="text-align: right; padding-right: 15px;">${emp.deptno}</td>
 	</tr>
 	</c:forEach>
 </tbody>

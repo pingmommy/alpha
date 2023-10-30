@@ -7,16 +7,39 @@
 <head>
 <meta charset="UTF-8">
 <title>city</title>
+<link rel="stylesheet" href="/css/box.css">
 <style type="text/css">
-
-tbody > tr:nth-child(2n){
-	background: #eda56050;
+#input {
+	border-radius: 5px;
+	border: none;
+	background: lightgrey;
+	font-size: 1.2em;
 }
 
+#input:hover {
+	background: grey;
+	color: white;
+}
+
+tbody > tr:nth-child(2n){
+	background: #f8f7fd;
+}
+
+td {
+	border-bottom: 3px solid lightgrey;
+	height: 40px;
+}
+
+th {
+  height : 40px;
+  border-bottom: 5px solid grey;
+  font-size: 15pt;
+ }
+
+ div {
+	 margin: 25px;
+}
 </style>
-
-
-
 <script type="text/javascript">
 window.onload = function(){
 	population.oninput = function (e) {
@@ -32,27 +55,23 @@ window.onload = function(){
 }
 </script>
 </head>
-<body>
-<h1>CITYLIST</h1>
-<hr>
-<form action="/city/list">
-<input type="search" list="codes" name="code" value="${param.code}">
+<body class="white">
+<h1 class="text_center" style="margin: 35px;">CITYLIST</h1>
+<div>
+<form action="/city/list" class="text_center">
+<input  type="range" name="population"  value="${empty param.population? 0 : param.population}" id="population" min="0" max="10000000" step="100000">
+<label><span id="pop_value"></span>이상</label>
+<input type="search" list="codes" name="code" value="${param.code}" style="width: 300px; height: 40px; border-radius: 5px;"  placeholder="지역검색">
 <datalist id="codes">
  <c:forEach var="c" items="${codes}">
   <option value="${c.code}">[${c.code}] ${c.name}</option>
  </c:forEach>
 </datalist>
-
-<input type="range" name="population"  value="${empty param.population? 0 : param.population}" id="population" min="0" max="10000000" step="100000">
-<label><span id="pop_value"></span>이상</label>
-
-<input type="submit" value="도시검색">
-
+<input id="input" type="submit" value="도시검색" style="width: 120px; height: 40px;">
 </form>
-
-<hr>
-
-<table border="1" width ="500">
+</div>
+<hr style="border: 5px solid #b7adf0">
+<table  width ="900" class="margin_center" style="margin-top: 20px;">
 <thead>
 	<tr>
 	<th>NO</th>
@@ -61,11 +80,9 @@ window.onload = function(){
 	<th>countryCode</th>
 	<th>district</th>
 	<th>population</th>
-	<th>population</th>
 	
 	</tr>
 </thead>
-
 <tbody>
  	<c:forEach var="city" items="${list}" varStatus="status">
  	<tr>
@@ -74,7 +91,6 @@ window.onload = function(){
  	 	<td>${city.name}</td>
  	 	<td>${city.countryCode}</td>
  	 	<td>${city.district}</td>
- 	 	<td align="right">${city.population}</td>
  	 	<td align="right"><fmt:formatNumber pattern="###,###,###,####" value="${city.population}"/></td>
  	</tr>
  	</c:forEach>
