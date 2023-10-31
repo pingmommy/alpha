@@ -28,7 +28,7 @@ public class CountryController {
 	
 	@GetMapping("/list")
 	void list(String continent, String region,Model model) {
-		log.info("list..."); // 요청이 잘 들어오나 확인. 
+		log.info("list..."); 
 		
 		List<Country> list = null;
 		
@@ -52,21 +52,13 @@ public class CountryController {
 		
 		model.addAttribute("continents", continents);
 		
-//		var regions = mapper.selectRegions(continent);
-//		
-//		model.addAttribute("regions",regions);
 	}
 	
 	@GetMapping("/region")
 	@ResponseBody
 	List<String> getRegions(String continent) {
-		//ObjectMapper mapper = new ObjectMapper();
-		//var a = mapper.readValue(continent, Country.class);
 		
 		var regions = mapper.selectRegions(continent);
-		
-		System.out.println(regions);
-	 
 		return regions;
 	}
 	

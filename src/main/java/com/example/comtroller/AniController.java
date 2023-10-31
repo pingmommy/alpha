@@ -25,8 +25,6 @@ public class AniController {
 		  }
 		  
 		  model.addAttribute("surface",alphas);
-		
-		
 	}
 	
 	@GetMapping("/cross")
@@ -42,8 +40,6 @@ public class AniController {
 		  }
 		  
 		  model.addAttribute("surface",alphas);
-		
-		
 	}
 	
 }

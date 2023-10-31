@@ -28,25 +28,8 @@ nav {
  }
 
 ul{
-/*   border: 2px solid red; */  
 	margin-top: 30px;
-  
 }
-
-ol{
-/*  border: 2px solid blue; */
- }
-
-li{
- /*  border: 2px solid green; */
- }
-
-li>div {
- /*  border: 4px dotted gray;  */
- 
-}
-
-
 
 .menu-title {
  	padding: 15px 10px;
@@ -72,13 +55,9 @@ li>div {
 	left: 10px;
 }
 
-/* login만 왼쪽으로 따로 떨어지게 레이아웃을 짰는데, fixed를 주었더니 계획했던 레이아웃이 적용되지 않았다. fixed는 문서를 벗어나서 절대적으로 고정되는 것을 
-의미하기 때문에 고정되는 화면의 크기를 지정해주어야 한다. 그래서 width:80%를 주었다. */
 
 .menu-item {
-	/* float: left; ->예전에는 수평메뉴를 만들 때 float으로 했다.*/
 	width: 230px;
-	/* min width: 200px; */
 	flex-shrink: 0;
  	text-align: center; 
  	background: #5eecfa;
@@ -115,11 +94,6 @@ li>div {
 
 }
 
-
-.sub-item{
-
-}
-
 .sub-item:hover >a{
 
   font-weight: bold;
@@ -150,10 +124,6 @@ function resize(){
 	
 }
 
-/* window.onload = () => {
-	setInterval(resize,100);
-} */
-
 $(document).ready(function(){
 	setInterval(resize,100);
 });
@@ -161,7 +131,6 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
-<!-- nav에서 높이를 주고 넓이는 100% 배경색을 화이트로 하면 뒤가 안 보임.   -->
 <nav>
 <ul class="menu">
 	<li style="padding: 0px 20px;">	

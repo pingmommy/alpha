@@ -20,9 +20,6 @@ public class DeptController {
 		
 	    var search =request.getParameter("search"); 
 	    
-	    
-		
-		//var list = mapper.selectAll();
 	    var list = mapper.selectByDname(search);
 		
 		request.setAttribute("list", list);

@@ -19,24 +19,8 @@ import util.Color;
 @RequestMapping("/alpha")
 public class AlphaController {
 
-// 배열로도 만들어보고 맵으로도 만들어 봐라 
-// Arraylist ...
-	
 	@GetMapping("/fill")
-	void fill(Model model) {
-	
-		/*
-		 * var rect = new ArrayList<ArrayList<Alpha>>();
-		 */		
-//	ArrayList로 작성
-//		for(int i =0; i<20; i++) {
-//			rect.add(new ArrayList<Alpha>());
-//			for(int j=0; j<40; j++) {
-//				rect.get(i).add(new Alpha());
-//			}
-//		}
-	  
-//  배열로 작성 	  
+	void fill(Model model) {	  
 	  Alpha[][] alphas = new Alpha[20][40];
 	  
 	  for(var i=0; i<alphas.length;i++) {
@@ -49,14 +33,6 @@ public class AlphaController {
 	  
 	  model.addAttribute("surface",alphas);
 		
-	}
-	
-	
-	//Rest(representation state transfer) API
-	@ResponseBody
-	@GetMapping("/data")
-	Alpha date() {
-		return new Alpha();  // Alpha를 리턴하니까 Alpha타입으로 메소드를 만든다. 
 	}
 	
 	@GetMapping("/race")
@@ -72,14 +48,6 @@ public class AlphaController {
 		model.addAttribute("surface", rect);
 	}
 	
-	@ResponseBody
-	@GetMapping("/racing")
-	Alpha racing() {
-
-		return new Alpha();
-	}
-	
-	
 	@GetMapping("/cross")
 	void cross(Model model) {
 		var alphas = new HashMap<Integer, ArrayList<Alpha>>();
@@ -90,7 +58,6 @@ public class AlphaController {
 				alphas.get(i).add(new Alpha());
 			}
 		}
-		
 		model.addAttribute("surface", alphas);
 	}
 	
@@ -107,9 +74,6 @@ public class AlphaController {
 			}
 			alphas.add(list);
 		}
-	
-	
-		
 		model.addAttribute("surface", alphas);
 	}
 	
@@ -123,10 +87,12 @@ public class AlphaController {
 			for(var j =0; j<40; j++) {
 				alphas.get(i).add(new Alpha());
 			}
-			
 			model.addAttribute("surface", alphas);
 		}
 	}
-
-
+	@ResponseBody
+	@GetMapping("/data")
+	Alpha date() {
+		return new Alpha();  // Alpha를 리턴하니까 Alpha타입으로 메소드를 만든다. 
+	}
 }

@@ -12,16 +12,16 @@
 <style type="text/css">
  img {
  
-  animation : rotate 10s infinite linear;
+  animation : rotate 5s infinite linear;
 }
 
 @keyframes rotate {
  from {
- 	transform: rotate(0deg);
+ 	transform: rotateX(0deg);
  }
  
  to {
- 	transform: rotate(360deg);
+ 	transform: rotateX(360deg);
  }
 }
 
@@ -33,8 +33,6 @@ $(function() {
 	for(let i=0; i<100 ; i++){
 		$('body').append('<img alt="xxx"/>').css('background','white');
 	}
-	
-	//$('img').attr('src','http://via.placeholder.com/100X100');
 	
 	$('img').attr({
 		alt: function(i) {

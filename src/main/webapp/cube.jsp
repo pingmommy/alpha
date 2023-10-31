@@ -24,20 +24,14 @@ body {
 }
 
 .cube {
-	/* border: 10px dotted gray; */
 	display: inline-block;
 	transform-style: preserve-3d;
-	
 	animation : rotate 10s infinite linear;
-	
-	/* transform: rotateX(45deg); */
 }
 
 .base {
-	/* border: 2px solid pink; */
 	width:200px;
 	height: 200px;
-	/* background: pink; */
 	text-align: center;
 	font-size: 1em;
 	line-height: 200px;	

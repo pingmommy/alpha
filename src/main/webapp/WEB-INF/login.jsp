@@ -83,17 +83,15 @@ section {
 
 <form action="/login" method="post">
 		<div class="input_box">
-		
-		<input id="id" name="username" placeholder="아이디" class="first"/>
+			<input id="id" name="username" placeholder="아이디" class="first"/>
 		</div>
 		
 		<div class="input_box">
-	    
-		<input id="pw" type="password"  name="password" placeholder="비밀번호" class="first"/>
+			<input id="pw" type="password"  name="password" placeholder="비밀번호" class="first"/>
 	    </div>
 		
 		<div class="input_box box">
-		<input type="submit" value="LOGIN" class="in" />
+			<input type="submit" value="LOGIN" class="in" />
 		 </div>
 
 </form>

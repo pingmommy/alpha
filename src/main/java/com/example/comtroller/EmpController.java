@@ -38,11 +38,5 @@ public class EmpController {
 	request.setAttribute("depts", depts);
 		
 	}
- // view를 리턴하지 않으면(void) 스프링이 알아서 요청한 루트를 뷰로 리턴한다.  	
+	
 }
-
-
-//10	경리부
-//20	인사부
-//30	영업부
-//40	전산부
