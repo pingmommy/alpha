@@ -31,19 +31,24 @@ th {
   font-size: 15pt;
  }
 
-div{
- padding: 10px;
- background: #dffbfe;
+ div{
+	margin-bottom: 30px;
  
+}
+
+section {
+	width: 1000px;
+	margin: 0px auto;
+	
 }
 	
 </style>
 </head>
 <body class="white" style="height: 1000px;">
-<h1 class="text_center">직원정보</h1>
+<h1 class="text_center" style="margin-top: 50px;">직원정보</h1>
 <div>
 <form action="/emp/list" class="text_center">
-	<select name="deptno" style="width: 100px; height: 35px;">
+	<select name="deptno" style="width: 150px; height:38px; border-radius: 5px; font-size: 1.1em;">
 		<c:choose>	
 			<c:when test="${empty param.deptno}">
 				<option value="" selected="selected">전체부서</option>
@@ -63,10 +68,12 @@ div{
 		</c:choose>
 		</c:forEach>
 	</select>
-	<input type="text" name="search"  style="width: 300px; height: 30px;">
+	<input type="text" name="search"  style="width: 300px; height:35px; border-radius: 5px;" placeholder="부서명">
 	<input id="input" type="submit" value="검색" style="width: 120px; height: 40px;">
 </form>
 </div>
+<section>
+<hr style="border: 5px solid #5eecfa; opacity: 0.5">
 <table width="800" class="margin_center" style="margin-top: 30px;">
 <thead>
 	<th>사  번</th>
@@ -95,6 +102,6 @@ div{
 	</c:forEach>
 </tbody>
 </table>
-
+</section>
 </body>
 </html>

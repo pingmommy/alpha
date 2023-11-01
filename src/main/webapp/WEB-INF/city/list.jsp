@@ -71,22 +71,20 @@ window.onload = function(){
 </form>
 </div>
 <hr style="border: 5px solid #b7adf0">
-<table  width ="900" class="margin_center" style="margin-top: 20px;">
+<table  width ="1200" class="margin_center" style="margin-top: 30px;">
 <thead>
 	<tr>
-	<th>NO</th>
-	<th>id</th>
-	<th>name</th>
-	<th>countryCode</th>
-	<th>district</th>
-	<th>population</th>
+	<th>ID/NO</th>
+	<th>NAME</th>
+	<th>COUNTRYCODE</th>
+	<th>DISTRICT</th>
+	<th>POPULATION</th>
 	
 	</tr>
 </thead>
 <tbody>
- 	<c:forEach var="city" items="${list}" varStatus="status">
+ 	<c:forEach var="city" items="${list}">
  	<tr>
- 		<td>${status.count}</td>
  	 	<td>${city.id}</td>
  	 	<td>${city.name}</td>
  	 	<td>${city.countryCode}</td>

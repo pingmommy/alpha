@@ -42,27 +42,27 @@ class Delete extends React.Component{
 	render() {
 		return (
 			<>
-			<h1>부서삭제</h1>
-			<hr/>
-			<Link to="/rest/dept">목록으로 이동</Link>
+			<div className="div"> 
+		 	<h1 className="h1">부서삭제</h1>
+		
+			<Link to="/rest/dept" className="link">목록으로 이동</Link>
 			<form onSubmit={event => this.onSubmit(event)}>
 				<fieldset>
-					<legend>deptno</legend>
+					<legend>부서번호</legend>
 					<input readOnly value={this.state.dept.deptno}/>
 				</fieldset>
 				<fieldset>	
-					<legend>dname</legend>
+					<legend>부서이름</legend>
 					<input name="dname" value={this.state.dept.dname} disabled/>
 				</fieldset>	
 				<fieldset>	
-					<legend>loc</legend>
+					<legend>지역</legend>
 					<input name="loc" value={this.state.dept.loc} disabled/>
 				</fieldset>
-				<fieldset>
-					<input type="submit" value="부서삭제"/>
-				</fieldset>
-					
+					<input type="submit" value="부서삭제" className="submit"/>
+				
 			</form>
+			</div>
 			</>
 		)
 	}

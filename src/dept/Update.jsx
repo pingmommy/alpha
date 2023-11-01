@@ -56,23 +56,26 @@ class Update extends React.Component{
 	render() {
 		return(
 			<>
-			<h1>부서수정</h1>
-			<hr/>
-			<Link to="/rest/dept">목록으로 이동</Link>
+			<div className="div"> 
+		 	<h1 className="h1">부서수정</h1>
+			<Link to="/rest/dept" className="link">목록으로 이동</Link>
 			<form onSubmit={event => this.onSubmit(event)}>
 				<fieldset>
-					<legend>deptno</legend>
+					<legend>부서번호</legend>
 					<input readOnly value={this.state.dept.deptno}/>
-					<legend>dname</legend>
-					<input name="dname" value={this.state.dept.dname == null ? "" :this.state.dept.dname} maxLength={35} onChange={event => this.onChange(event)} required/>
-					<legend>loc</legend>
-					<input name="loc" value={this.state.dept.loc == null? "" : this.state.dept.loc} maxLength={13} onChange={event => this.onChange(event)}/>
-					<fieldset>
-						<input type="submit" value="부서수정"/>
-					</fieldset>
-					
 				</fieldset>
+				<fieldset>
+					<legend>부서이름</legend>
+					<input name="dname" value={this.state.dept.dname == null ? "" :this.state.dept.dname} maxLength={35} onChange={event => this.onChange(event)} required/>
+				</fieldset>
+				<fieldset>
+					<legend>위치</legend>
+					<input name="loc" value={this.state.dept.loc == null? "" : this.state.dept.loc} maxLength={13} onChange={event => this.onChange(event)}/>
+					</fieldset>
+						<input type="submit" value="부서수정" className="submit"/>
+					
 			</form>
+			</div>
 			</>
 		)
 	}

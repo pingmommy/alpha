@@ -1,16 +1,74 @@
 
+body{
+	background: white;
+	height:750px;
+	}
+	
+.div {
+	margin: auto;
+	border-top: 5px solid #ff9bc1;
+	width: 900px;
+	padding-top: 30px; 
+}	
+
+.link {
+	width: 120px;
+	height: 50px;
+	font-size: 1.2em;
+	background: lightgrey;
+	padding:10px 15px;
+	border-radius: 5px;
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+}
+
+.link:hover {
+	background: grey;
+}
+
+.submit {
+	width: 200px;
+	height: 40px;
+	border-radius: 5px;
+	margin-left: 20px;
+	font-size: 1.2em;
+	padding: 5px;
+	border: none;
+	color: white;
+	background: grey;
+}
+
+.submit:hover {
+	background: lightgrey;
+	color: black;
+}
+
+.h1{
+	margin-left:50px;
+  	display:inline-block;
+	margin-right:20px;
+}
+
 table {
 	width: 800px;
-	margin: auto;
+	margin: 15px auto;
 	border-collapse: collapse;
 }
 
-table th {
+ th {
 	padding: 10px;
+	height : 40px;
+  border-bottom: 5px solid grey;
+  border-top: 5px solid grey;
+  font-size: 15pt;
 }
 
-table td {
+ td {
 	padding: 10px;
+	border-bottom: 3px solid lightgrey;
+	height: 40px;
+	text-align: center;
 	
 }
 

@@ -91,6 +91,7 @@ ul{
 	overflow:hidden;
 	list-style: none;
 	padding-left: 0px;
+	font-family: 'IBM Plex Sans KR', sans-serif;
 
 }
 
@@ -149,50 +150,50 @@ $(document).ready(function(){
 	<li class="menu-item">
 		<div class="menu-title">ALPHA</div>
 		<ol class="sub-menu">
-			<li class="sub-item"><a target="content" href="/alpha/fill">fill</a></li>
-			<li class="sub-item"><a target="content" href="/alpha/cross">cross</a></li>
-			<li class="sub-item"><a target="content" href="/alpha/race">race</a></li>
-			<li class="sub-item"><a target="content" href="/alpha/zigzag">zigzag</a></li>
-			<li class="sub-item"><a target="content" href="/earthworm.jsp">earthworm</a></li>
+			<li class="sub-item"><a target="content" href="/alpha/fill">FILL</a></li>
+			<li class="sub-item"><a target="content" href="/alpha/cross">CROSS</a></li>
+			<li class="sub-item"><a target="content" href="/alpha/race">RACE</a></li>
+			<li class="sub-item"><a target="content" href="/alpha/zigzag">ZIGZAG</a></li>
+			<li class="sub-item"><a target="content" href="/earthworm.jsp">EATHWARM</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
 		<div class="menu-title">ANIMATION</div>
 		<ol class="sub-menu">
-			<li class="sub-item"> <a target="content" href="/ani/fill"">ani_fill</a></li>
-			<li class="sub-item"> <a target="content" href="/ani/cross"">ani_cross</a></li>
-			<li class="sub-item"> <a target="content" href="/cube.jsp"">cube</a></li>
-			<li class="sub-item"> <a target="content" href="/placeholder.jsp"">placeholder</a></li>
+			<li class="sub-item"> <a target="content" href="/ani/fill"">ANI_FILL</a></li>
+			<li class="sub-item"> <a target="content" href="/ani/cross"">ANI_RACE</a></li>
+			<li class="sub-item"> <a target="content" href="/cube.jsp"">CUBE</a></li>
+			<li class="sub-item"> <a target="content" href="/placeholder.jsp"">PLACEHOLDER</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
 		<div class="menu-title">REACT</div>
 		<ol class="sub-menu">
-			<li class="sub-item"><a target="content" href="/fill.jsp">fill</a></li>
-			<li class="sub-item"><a target="content" href="/cross.jsp">cross</a></li>
-			<li class="sub-item"><a target="content" href="/sort.jsp">sort</a></li>
-			<li class="sub-item"><a target="content" href="/move.jsp">move</a></li>
-			<li class="sub-item"><a target="content" href="/race.jsp">race</a></li>
-			<li class="sub-item"><a target="content" href="/flow.jsp">flow</a></li>
-			<li class="sub-item"><a target="content" href="/ping.jsp">ping</a></li>
-			<li class="sub-item"><a target="content" href="/rest/dept">dept</a></li>
+			<li class="sub-item"><a target="content" href="/fill.jsp">FILL</a></li>
+			<li class="sub-item"><a target="content" href="/cross.jsp">CROSS</a></li>
+			<li class="sub-item"><a target="content" href="/sort.jsp">SORT</a></li>
+			<li class="sub-item"><a target="content" href="/move.jsp">MOVE</a></li>
+			<li class="sub-item"><a target="content" href="/race.jsp">RACE</a></li>
+			<li class="sub-item"><a target="content" href="/flow.jsp">FLOW</a></li>
+			<li class="sub-item"><a target="content" href="/ping.jsp">PING</a></li>
+			<li class="sub-item"><a target="content" href="/rest/dept">DEPT</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
 		<div class="menu-title">EMPLOYEE</div>
 		<ol class="sub-menu">
-			<li class="sub-item"><a target="content" href="/dept/list">dept</a></li>
-			<li class="sub-item"><a target="content" href="/emp/list">emp</a></li>
-			<li class="sub-item"><a target="content" href="/salgrade/race">salgrade</a></li>
+			<li class="sub-item"><a target="content" href="/dept/list">DEPT</a></li>
+			<li class="sub-item"><a target="content" href="/emp/list">EMP</a></li>
+			<li class="sub-item"><a target="content" href="/emp/sal">SALGRADE</a></li>
 		</ol>
 	</li>
 	<li class="menu-item">
 		<div class="menu-title">CITY</div>
 		<ol class="sub-menu">
-			<li class="sub-item"><a target="content" href="/city/list">city</a></li>
-			<li class="sub-item"><a target="content" href="/country/list">country</a></li>
-			<li class="sub-item"><a target="content" href="/language/list">language</a></li>
-			<li class="sub-item"><a target="content" href="/search">search</a></li>
+			<li class="sub-item"><a target="content" href="/city/list">CITY</a></li>
+			<li class="sub-item"><a target="content" href="/country/list">COUNTRY</a></li>
+			<li class="sub-item"><a target="content" href="/language/list">LANGUAGE</a></li>
+			<li class="sub-item"><a target="content" href="/search">SEARCH</a></li>
 		</ol>
 	</li>
 	<sec:authorize access="isAnonymous()">

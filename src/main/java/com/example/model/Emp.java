@@ -24,7 +24,7 @@ public class Emp {
 	LocalDate hiredate; //localdate
 	Double sal;  //double
 	Double comm;  //double
-	
+	Integer grade;
 	
 	//double comm;  
 	/*primitive타입으로 타입을 정할 경우 null이 0.0으로 취급하는데, 현재의 경우는 null을 0으로 취급하면 의미가 달라져서 안 된다. 

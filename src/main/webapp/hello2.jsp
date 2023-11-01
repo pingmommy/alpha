@@ -99,7 +99,7 @@ from {color: pink;}
 </script>
 
 </head>
-<body>
+<body style="height: 300px;">
 	<div class="wrapper typing">
     <div class="typing-demo ">
        안녕하세요! 조아라입니다 :)♥

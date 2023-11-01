@@ -22,10 +22,15 @@
 	color: white;
 }
 
-div{
+/* div{
  padding: 10px;
  background: #dffbfe;
  
+} */
+section {
+	width: 800px;
+	margin: 0px auto;
+	
 }
 
 td {
@@ -39,17 +44,23 @@ th {
   font-size: 15pt;
  }
 
+ div{
+	margin-bottom: 30px;
+ 
+}
 
 </style>
 </head>
 <body class="white" style="height: 700px;">
-<h1 class="text_center">부서목록</h1>
+<h1 class="text_center" style="margin-top: 50px;">부서목록</h1>
 <div>
 <form action="/dept/list" class="text_center">
-	<input type="text" name="search" style="width: 300px; height: 30px;" >
+	<input type="text" name="search" style="width: 300px; height: 35px; border-radius: 5px; font-size: 1.2em;"placeholder="부서명" >
 	<input id="input" type="submit" value="부서검색" style="width: 120px; height: 40px;" >
 </form>
 </div>
+<section>
+<hr style="border: 5px solid #5eecfa; opacity: 0.5">
 <table width="500" class="margin_center" style="margin-top: 30px;">
 	<thead>
 	<tr>
@@ -66,6 +77,6 @@ th {
 	</c:forEach>
 	</tbody>
 </table>
-
+</section>
 </body>
 </html>

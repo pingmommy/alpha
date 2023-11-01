@@ -7,36 +7,63 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-* {
-	padding: 10px;
+<link rel="stylesheet" href="/css/box.css">
+<style type="text/css">
+.input {
+	border-radius: 5px;
+	border: none;
+	background: lightgrey;
+	font-size: 1.2em;
+	width: 100px;
+	height: 40px;
 }
 
-#heading {
-	color: blue;
+.input:hover {
+	background: grey;
+	color: white;
+}
+
+tbody > tr:nth-child(2n){
+	background: #f8f7fd;
 }
 
 td {
-	border: 1px solid red;
+	border-bottom: 3px solid lightgrey;
+	height: 40px;
 }
 
-#heading, td {
-	text-decoration: underline;
-}
+th {
+  height : 40px;
+  border-bottom: 5px solid grey;
+  font-size: 15pt;
+ }
 
 tbody > tr:hover{
-	background: lightpink;
+	background: #dbd6f7;
 }
 
 #continent option {
-	color: Green;
+	color: purple;
 }
 
-/*
-#continent option ||  #heading, td 의 차이 : ,가 없으면 아이디에 해당하는 태그의 자식태그들 중 스타일타겟 중 2번 째 요소에 해당하는 태그들한테 스타일을 적용한다는 의미 
-  */
-</style>
+select {
+	width: 300px;
+	 height: 40px; 
+	 font-size: 1.2em;
+	 border-radius: 5px;
+}
 
+a{
+	padding: 8px 15px;
+	text-decoration: none;
+	color: black;
+}
+
+div {
+	margin-bottom: 30px;
+}
+	
+</style>
 
 <script type="text/javascript">
 window.onload = function(){
@@ -54,29 +81,12 @@ window.onload = function(){
 		xhr.send();
 		xhr.onload = e => {
 			setRegions(JSON.parse(xhr.responseText));
-			
-			
-			
-			
 		}
-		
-		
-		
-		//var select = document.getElementById("continent");
-		
-		//var continent =  select.options[select.selectedIndex].value; // == document.forms[0].continent.value
-		
-		//var continent = stringify(selectValue);
-		
 		console.log(continent);
 	}
 	continent.onchange();
 	
 }
-
-
-
-
 
 function setRegions(regions){
 	console.log(regions);
@@ -96,8 +106,6 @@ function setRegions(regions){
 		}
 		
 		region.append(option);
-
-		
 		
 	for(let re of regions){
 		let option = document.createElement('option');
@@ -111,32 +119,23 @@ function setRegions(regions){
 		
 		region.append(option);
 	}
-	
-	
-	
 }
-
-
-
-
 
 </script>
 </head>
-<body>
-<h1 id="heading">1.COUNTRY LIST</h1>
-
-<hr>
-<form action="/country/list">
-<select name="continent" id="continent" onchange="changeSelect()">
+<body class="white">
+<h1 class="text_center" style="margin: 35px;">나라정보</h1>
+<div>
+<form action="/country/list" class="text_center">
+<select name="continent" id="continent" onchange="changeSelect()" style="width: 300px; height: 40px;">
  <c:choose>
  <c:when test="${empty param.continent}">
  	<option id="con_value" value="" selected="selected">전체</option>
  </c:when>
  <c:otherwise>
- 	<option value="">전체</option>
+ 	<!-- <option value="">전체</option> -->
  </c:otherwise>
  </c:choose>
-
  <c:forEach var="continent" items="${continents}">
 <c:choose>
 <c:when test="${!empty param.continent and param.continent eq continent}">
@@ -149,51 +148,45 @@ function setRegions(regions){
  </c:forEach>
 </select>
 <select name="region" id="region">
-<%-- 		<option value="">전체</option>
-	 <c:forEach var="region" items="${regions}">
-		<option value="${region}">${region}</option>
-   </c:forEach> --%>
 </select>
-<%-- <input type="search" list="r" name="region"  value="${param.region}">
-<datalist id="r">
-   <c:forEach var="re" items="${region}">
-	<option value="${re.region}">${re.region}</option>
-   </c:forEach>
-</datalist> --%>
-<input type="submit" value="지역검색">
-<a href="/country/list">뒤로가기</a>
+<input class="input" type="submit" value="검색">
+<a href="/country/list" class="input">처음으로</a>
 </form>
-<hr>
-<table border="1" width="900">
+</div>
+<hr style="border: 5px solid #b7adf0;">
+<table width="1500"  class="margin_center"style="margin-top: 30px;">
 	<thead>
 	  <tr>
-		<th>no</th>
-		<th>code2</th>
-		<th>capital</th>
-		<th>headofstate</th>
-		<th>governmentform</th>
-		<th>localname</th>
-		<th> gnp_old</th>
-		<th> gnp</th>
-		<th>life_expectancy</th>
-		<th>population</th>
-		<th>indep_year</th>
-		<th>surface_area</th>
-		<th>region</th>
-		<th>continent</th>
-		<th>name</th>
-		<th>code</th>
+		<th>NO</th>
+		<th>CODE</th>
+		<th>CODE2</th>
+		<th>CONTINENT</th>
+		<th>NAME</th>
+		<th>LOCALNAME</th>
+		<th>CAPITAL</th>
+		<th>HEADOFSTATE</th>
+		<th>GOVERMENTFORM</th>
+		<th>GNP_OLD</th>
+		<th>GNP</th>
+		<th>LIFE_EXPECTANCY</th>
+		<th>POPULATION</th>
+		<th>INDEP_YEAR</th>
+		<th>SURFACE_AREA</th>
+		<th>REGION</th>
 	   </tr>	
 	</thead>
 	<tbody>
 	 <c:forEach var="country" items="${list}" varStatus="status">
 	 <tr>
 	 	<td>${status.count}</td>
+	 	<td>${country.code}</td>
 	 	<td>${country.code2}</td>
+	 	<td>${country.name}</td>
+	 	<td>${country.continent}</td>
+	 	<td>${country.localName}</td>
 	 	<td>${country.capital}</td>
 	 	<td>${country.headOfState}</td>
 	 	<td>${country.governmentForm}</td>
-	 	<td>${country.localName}</td>
 	 	<td>${country.gnpOld}</td>
 	 	<td>${country.gnp}</td>
 	 	<td>${country.lifeExpectancy}</td>
@@ -201,9 +194,6 @@ function setRegions(regions){
 	 	<td>${country.indepYear }</td>
 	 	<td>${country.surfaceArea }</td>
 	 	<td>${country.region}</td>
-	 	<td>${country.continent}</td>
-	 	<td>${country.name}</td>
-	 	<td>${country.code}</td>
 	 </tr>
 	 </c:forEach>
 	

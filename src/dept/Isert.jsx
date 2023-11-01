@@ -40,27 +40,28 @@ class Insert extends React.Component{
 	render(){
 	 return(
 		 <>
-		 <h1>부서추가</h1>
-		 <hr/>
-		 <Link to="/rest/dept">목록으로이동</Link>
-		 <hr/>
+		 <div className="div"> 
+		 <h1 className="h1">부서추가</h1>
+		 <Link to="/rest/dept" className="link">목록으로이동</Link>
+		
 		 <form onSubmit={event =>this.onSubmit(event)}>
 		 	<fieldset>
-		 		<legend>deptno</legend>
+		 		<legend>부서번호</legend>
 		 		<input type="number" required min={0} max={99} onChange={event =>this.state.dept.deptno = event.target.value}/>
 		 	</fieldset>
 		 	<fieldset>
-		 		<legend>dname</legend>
+		 		<legend>부서이름</legend>
 		 		<input type="text" required maxLength={35} onChange={event =>this.state.dept.dname = event.target.value}/>
 		 	</fieldset>
 		 	<fieldset>
-		 		<legend>dname</legend>
+		 		<legend>위치</legend>
 		 		<input type="text" maxLength={13} onChange={event => this.state.dept.loc = event.target.value}/>
 		 	</fieldset>
-		 	<fieldset>
-		 	 	<input type="submit" value="부서추가"/>
-		 	</fieldset>
+		 	
+		 	 	<input type="submit" value="부서추가" className="submit"/>
+		 	
 		 </form>
+		 </div>
 		 </>
 	 )	
 	}

@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -22,6 +23,7 @@ public class EmpController {
 	@Autowired
 	DeptMapper deptmapper;
 	
+	
 	@GetMapping("/list")
 	void selectAll(Integer deptno, String search, HttpServletRequest request) {
 	
@@ -38,5 +40,14 @@ public class EmpController {
 	request.setAttribute("depts", depts);
 		
 	}
+	
+	@GetMapping("/sal")
+	void selectGrade(Model model) {
+		var list = empmapper.selectGrade();
+		model.addAttribute("list",list);
+			
+		var sal = empmapper.selectGradelist();
+		model.addAttribute("sal", sal);
+		}
 	
 }

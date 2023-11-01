@@ -37,10 +37,14 @@ class List extends React.Component {
 	render() {
 		return(
 			<>
-				<h1>부서목록</h1>
-				<hr/>
-				<Link to="/rest/dept/insert">add</Link>
-				<table border={1}>
+				<div className='div'>
+				<h1 style={{
+					marginLeft:50,
+				    display:'inline-block',
+				    marginRight:20
+				    }}>부서목록</h1>
+				<Link to="/rest/dept/insert" className='link'>부서추가</Link>
+				<table>
 					<thead>
 					<tr>
 						<th>deptno</th>
@@ -64,6 +68,7 @@ class List extends React.Component {
 					}
 					</tbody>
 				</table>
+				</div>
 			</>
 	)				
  }

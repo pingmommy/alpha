@@ -13,7 +13,7 @@
 </head>
 <body>
 
-<h1>부서관리</h1>
+<h1 style="text-align: center;">부서관리</h1>
 
 <section id="root"></section>
 </body>
