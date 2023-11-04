@@ -1,6 +1,6 @@
 #surface  td {	
 	position: relative;	
-	transition: left 2s, top 2s, transform 2s;
+	
 }
 
 .collapse{
@@ -18,7 +18,7 @@ body{
 }
 
 #surface  {
-	position: relative;
+	/*position: relative;*/
 	border: 1px solid red;
 }
 

@@ -93,6 +93,6 @@ public class AlphaController {
 	@ResponseBody
 	@GetMapping("/data")
 	Alpha date() {
-		return new Alpha();  // Alpha를 리턴하니까 Alpha타입으로 메소드를 만든다. 
+		return new Alpha();  
 	}
 }

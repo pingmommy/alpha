@@ -76,7 +76,6 @@ function startBtn_click(e){
 		xhr.open('GET', '/alpha/data')
 		xhr.responseType='json';
 		
-		// 비동기방식으로 진행하는데, xhr이 제대로 동작하면 온로드가 수행된다. 
 		xhr.onload = e =>{
 			let alpha =  xhr.response;
 			console.log(alpha);

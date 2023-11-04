@@ -32,8 +32,6 @@ class Flow extends Alpha {
 
 class App extends React.Component {
 	
-
-	
 	constructor(){
 		super();
 		let w = $('.collapse td').outerWidth();
@@ -55,7 +53,6 @@ class App extends React.Component {
 		surface:[],
 		disabled: false,
 		rowNum: 0,
-	
 	}
 	
 	move(body,direction){
@@ -64,7 +61,6 @@ class App extends React.Component {
 			 body[i].setColumn(body[i+1].column);
 			 body[i].setLine(body[i+1].line);
 		 }
-		 
 		 
 		 let head = body[body.length-1];
 		 

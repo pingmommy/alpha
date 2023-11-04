@@ -31,7 +31,6 @@ public class RestDeptController {
 	
 	@GetMapping(headers = "Accept=text/html")
 	void view() {
-		
 	}
 	
 	@GetMapping

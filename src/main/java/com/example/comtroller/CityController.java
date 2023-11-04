@@ -30,6 +30,7 @@ public class CityController {
 
 		list = citymapper.searchAll(code, population);
 		
+		
 		model.addAttribute("list", list);
 		
 		var codes =  citymapper.selectCountryCodes();

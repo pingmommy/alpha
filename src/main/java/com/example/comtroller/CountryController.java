@@ -28,8 +28,9 @@ public class CountryController {
 	
 	@GetMapping("/list")
 	void list(String continent, String region,Model model) {
-		log.info("list..."); 
-		
+		/*
+		 * log.info("list...");
+		 */		
 		List<Country> list = null;
 		
 		if(continent == null || continent.trim().equals("")) {

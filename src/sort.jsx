@@ -213,7 +213,7 @@ class App extends React.Component {
 				<input name='sort' type='radio' onChange={() => this.onSelect(3) }  checked={this.sortNum==3}/>
 				<label>COLUMN[0][0]</label>
 				<input name='sort' type='radio' onChange={() =>this.onSelect(4) }  checked={this.sortNum==4}/>
-				<label>COLUMN[0][0]</label>
+				<label>COLUMN[20][40]</label>
 				<input name='sort' type='radio' onChange={() =>this.onSelect(5) }  checked={this.sortNum==5}/>
 			</div>
 			<table id='surface' className='collapse'

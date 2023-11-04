@@ -93,7 +93,6 @@ class Cross{
 	   	this.alpha = await response.json();
 	   	this.alpha.line=10;
 	   	this.alpha.column=20;
-		/* console.log(this.alpha); */
 		
 		this.show();
 		

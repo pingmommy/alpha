@@ -160,8 +160,9 @@ function setRegions(regions){
 		<th>NO</th>
 		<th>CODE</th>
 		<th>CODE2</th>
-		<th>CONTINENT</th>
 		<th>NAME</th>
+		<th>CONTINENT</th>
+		<th>REGION</th>
 		<th>LOCALNAME</th>
 		<th>CAPITAL</th>
 		<th>HEADOFSTATE</th>
@@ -172,7 +173,6 @@ function setRegions(regions){
 		<th>POPULATION</th>
 		<th>INDEP_YEAR</th>
 		<th>SURFACE_AREA</th>
-		<th>REGION</th>
 	   </tr>	
 	</thead>
 	<tbody>
@@ -183,6 +183,7 @@ function setRegions(regions){
 	 	<td>${country.code2}</td>
 	 	<td>${country.name}</td>
 	 	<td>${country.continent}</td>
+	 	<td>${country.region}</td>
 	 	<td>${country.localName}</td>
 	 	<td>${country.capital}</td>
 	 	<td>${country.headOfState}</td>
@@ -193,7 +194,6 @@ function setRegions(regions){
 	 	<td>${country.population}</td>
 	 	<td>${country.indepYear }</td>
 	 	<td>${country.surfaceArea }</td>
-	 	<td>${country.region}</td>
 	 </tr>
 	 </c:forEach>
 	

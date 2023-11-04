@@ -21,7 +21,6 @@ import sleep from 'es7-sleep';
 	 init() {
 		 this.left = parseInt(Math.random()*500+400);
 		  this.top = 100;
-		 /*this.top = parseInt(Math.random()*20+1);*/
 		  this.zIndex =0;
 		  this.scale =3;
 	 }
@@ -33,10 +32,6 @@ import sleep from 'es7-sleep';
 		 this.scale =1;
 	 }
 	 
-	   /* 되나 안 되나 고정된 값으로 테스트함. 
-	   
-	    this.left = 700;
-		 this.top = 100;*/
 	 }
 	 
 	 
@@ -159,7 +154,6 @@ class App extends React.Component {
 			</table >
 			</div>
 			<table id='surface' className='collapse'
-/*			<table style={{borderCollapse:'collapse', fontFamily:'monospace',fontSize:'2em'} }*/
 			onMouseDown={event=> event.preventDefault()}
 			onContextMenu={event => event.preventDefault()}
 			>

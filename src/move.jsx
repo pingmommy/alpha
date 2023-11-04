@@ -50,10 +50,7 @@ class App extends React.Component {
 	
 	async move(){
 			for(;;){
-		
-		
 		let a =  Math.random()*700;
-		console.log(a);
 		
 		for(let i=0; i<10; i++){
 			for(let j=0; j<20; j++){

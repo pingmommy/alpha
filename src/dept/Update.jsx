@@ -10,22 +10,18 @@ class Update extends React.Component{
 	}
 	
 	componentDidMount(){
-		/*console.log(this.props.location);
-		console.log(this.props.location.state);*/
 		this.state.dept = this.props.location.state.dept;
 		console.log(this.state.dept);
 		this.forceUpdate();
 	}
 	
 	onChange(e) {
-		console.log(e.target.name + "=" + e.target.value);
 		this.state.dept[e.target.name]=e.target.value;
 		this.forceUpdate();
 	}
 	
 	async onSubmit(e) {
 		e.preventDefault();
-		console.log("submit...");
 		
 		let response = await fetch('/rest/dept',{
 			method:'PUT',

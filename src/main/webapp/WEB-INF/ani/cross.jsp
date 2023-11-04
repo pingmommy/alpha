@@ -35,7 +35,6 @@ div.center{
 	display: inline-block; 
 	font-size: 2.0em;
 	padding: 5px 0px 0px 0px ;
-	/* margin-bottom: 10px; */	
 }
 
 .confiqure-border-1 {

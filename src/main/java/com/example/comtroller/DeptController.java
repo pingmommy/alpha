@@ -18,8 +18,7 @@ public class DeptController {
 	@GetMapping("/dept/list")
 	String list(HttpServletRequest request) {
 		
-	    var search =request.getParameter("search"); 
-	    
+		var search =request.getParameter("search"); 
 	    var list = mapper.selectByDname(search);
 		
 		request.setAttribute("list", list);

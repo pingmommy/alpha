@@ -68,7 +68,7 @@ section {
 		</c:choose>
 		</c:forEach>
 	</select>
-	<input type="text" name="search"  style="width: 300px; height:35px; border-radius: 5px;" placeholder="부서명">
+	<input type="text" name="search"  style="width: 300px; height:35px; border-radius: 5px;" placeholder="이름, 직급">
 	<input id="input" type="submit" value="검색" style="width: 120px; height: 40px;">
 </form>
 </div>
