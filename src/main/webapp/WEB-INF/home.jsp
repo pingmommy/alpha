@@ -21,7 +21,7 @@ html{
 
 nav {
 
- 	height: 150px;
+ 	height: 100px;
  	width: 100%;
  	background: #5eecfa;
  	position: fixed;
@@ -193,7 +193,6 @@ $(document).ready(function(){
 			<li class="sub-item"><a target="content" href="/city/list">CITY</a></li>
 			<li class="sub-item"><a target="content" href="/country/list">COUNTRY</a></li>
 			<li class="sub-item"><a target="content" href="/language/list">LANGUAGE</a></li>
-			<li class="sub-item"><a target="content" href="/search">SEARCH</a></li>
 		</ol>
 	</li>
 	<sec:authorize access="isAnonymous()">
@@ -204,7 +203,7 @@ $(document).ready(function(){
 		</li>
 		<li class="menu-item">
 		    <div class="menu-title">
-		    	<a href="/login">REGISTER</a>
+		    	<a href="/register">REGISTER</a>
 		    </div>
 		</li>
 	</sec:authorize>

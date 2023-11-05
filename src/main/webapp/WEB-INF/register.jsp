@@ -1,11 +1,10 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@taglib prefix="c" uri="jakarta.tags.core" %>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-
+<title>register</title>
 <style type="text/css">
 
 
@@ -33,7 +32,7 @@ section {
 
 .box{
   border-radius: 15px;
-  background: #5eecfa;
+  background: #ff9bc1;
   width: 60%;
   margin: 10px auto;
   padding: 15px 0px;
@@ -69,20 +68,21 @@ section {
 
 </style>
 
-<title>login</title>
+<script type="text/javascript">
+window.onload = function(){
+
+submit.onclick = function(){
+	alert("가입을 축하드립니다!");
+}
+}
+</script>
 </head>
 <body>
-<h1 style="text-align: center; margin-top: 100px;">LOGIN</h1>
-<hr>
-<c:if test="${param.error==''}">
-	<div class="error">사용자 ID 또는 비밀번호를 확인해주세요.</div>
-</c:if>
+<h1 style="text-align: center; margin-top: 100px;">SIGN IN</h1>
 <section>
-
-
-<form action="/login" method="post">
-		<div class="input_box">
-			<input id="id" name="username" placeholder="아이디" class="first"/>
+<form action="/signup" method="post">
+<div class="input_box">
+			<input id="id" name="id" placeholder="아이디" class="first"/>
 		</div>
 		
 		<div class="input_box">
@@ -90,11 +90,9 @@ section {
 	    </div>
 		
 		<div class="input_box box">
-			<input type="submit" value="LOGIN" class="in" />
+			<input id="submit" type="submit" value="SIGNIN" class="in" />
 		 </div>
-
 </form>
 </section>
-
 </body>
 </html>

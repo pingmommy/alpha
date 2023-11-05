@@ -2,6 +2,7 @@ package com.example.mapper;
 
 import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 
 import com.example.model.Dept;
@@ -20,6 +21,6 @@ public interface MemberMapper {
 			)
 			
 		""")
-	int insert(Member member);
+	int insert(@Param("id") String id,@Param("password")String password,@Param("roles") String roles);
 
 }

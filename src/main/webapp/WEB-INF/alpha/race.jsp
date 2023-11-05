@@ -62,22 +62,23 @@ function race(alpha){
 
 	
 	 let tr = document.createElement('tr');
-	 let tdNo = document.createElement('td');
-	 let tdAlpha = document.createElement('td');
 	 let tdCount = document.createElement('td');
+	 let tdAlpha = document.createElement('td');
+	 let tdTid = document.createElement('td');
 		 
-	 tr.append(tdNo);
-	 tr.append(tdAlpha);
 	 tr.append(tdCount);
+	 tr.append(tdAlpha);
+	 tr.append(tdTid);
 	
 	 
 	 stat.tBodies[0].append(tr);
 	
-	 tdNo.innerText = tr.parentElement.rows.length;
 	 tdAlpha.innerText = alpha.ch;
 	 tdAlpha.style.color = alpha.fg;
 	 tdAlpha.style.background = alpha.bg;
 	 tdCount.innerText = 0;
+	 tdTid.style.opacity='0.0';
+
 	 
 	 
 
@@ -127,6 +128,7 @@ function race(alpha){
 	}, 100);
 	
 	tid.push(tt);
+	tdTid.innerText = tt;
 	console.log(tid);
 	
 	count.innerText = ++count.innerText;
@@ -140,11 +142,12 @@ function race(alpha){
 
 function list_click(e){
 	let td = e.target;
-	console.log("targetsibling : "+e.target.previousElementSibling.innerText);
-	num = e.target.previousElementSibling.innerText-1;
+	console.log("targetsibling : "+e.target.nextSibling.innerText);
+	num = parseInt(e.target.nextSibling.innerText);
 	console.log(num);
-	console.log(a[num]);
-	let d=$('#table1')[0].rows[a[num].line-1].cells[a[num].column-1];
+	index=tid.indexOf(num);
+	console.log(a[index]);
+	 let d=$('#table1')[0].rows[a[index].line-1].cells[a[index].column-1];
 	 d.style.visibility='hidden';
 	td.remove();
 	
@@ -171,7 +174,7 @@ $(function (){
 			race(alpha);					
 		}); }
 	
-	tb.onclick = e=>{ list_click(e); clearInterval(tid[num])};
+	tb.onclick = e=>{ list_click(e); clearInterval(tid[index])};
 	
 });
 
@@ -207,7 +210,7 @@ $(function (){
 <table width="400"  id="stat">
  <thead>
  <tr>
- 	<th>no</th><th>Alpha</th><th>roundCount</th>
+ 	<th>Count</th><th>roundingAlpha</th>
  </tr>
  </thead>
  <tbody id="tb">

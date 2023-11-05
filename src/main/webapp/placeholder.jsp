@@ -9,23 +9,6 @@
 
 <title>placeholder.jsp</title>
 
-<style type="text/css">
- img {
- 
-  animation : rotate 5s infinite linear;
-}
-
-@keyframes rotate {
- from {
- 	transform: rotateX(0deg);
- }
- 
- to {
- 	transform: rotateX(360deg);
- }
-}
-
-</style>
 
 
 <script type="text/javascript">
@@ -60,9 +43,23 @@ $(function() {
 			return `http://via.placeholder.com/\${width}X\${height}/\${fg}/\${bg}`
 		}
 	})
-	.css('border','1px solid red')
 	.css('margin',10)
 	.css('vertical-align','top');
+	
+	 keyframes = [{transform:"rotate(1000deg)"},
+			{transform:"rotateX(2000deg)"},
+			{transform:"rotateY(1000deg)"},
+			{transform:"rotate(100deg)"},
+			{transform:"rotateX(500deg)"},
+			{transform:"rotate(200deg)"}];
+	option = { duration:1000, iterations:Infinity};
+	
+	a=$('img')
+	
+	for(let img of a){
+		img.animate(keyframes[parseInt(Math.random()*6)],option);
+	}
+	
 });
 
 
