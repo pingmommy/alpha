@@ -8,7 +8,7 @@ import sleep from 'es7-sleep';
 
 class Flow extends Alpha {
 	
-	position='relative'
+	/*position='relative'*/
 	left =0;
 	top =0;
 	
