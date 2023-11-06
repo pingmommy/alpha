@@ -138,7 +138,6 @@ btnUp_click(e){
 				}
 				</tbody>
 			</table>
-			<p>selecting된 row를 리스트로 표현해야...</p>
 			</>
 	)				
  }
