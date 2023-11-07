@@ -100,9 +100,7 @@ class App extends React.Component {
 	}
 			
 			
-	btnStop_click(e){		
-		
-	}
+
 			
 	async pingpong(body) {
 		
